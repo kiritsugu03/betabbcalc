@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<!-- saved from url=(0067)file:///C:/NetEng/startbootstrap-sb-admin-2-1.0.7/pages/index.html# -->
+<html lang="en" ng-app="bbcalc" class="ng-scope"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}.ng-hide-add-active,.ng-hide-remove{display:block!important;}</style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>BB Calculator</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="./BB Calculator_files/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="./BB Calculator_files/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="./BB Calculator_files/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!--Toggle-->
+    <link href="./BB Calculator_files/bootstrap-toggle.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body ng-controller="main" class="ng-scope">
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse active">
+                    <ul class="nav in" id="side-menu">
+                        <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                            </div>
+                            <!-- /input-group -->
+                        </li>
+                        <li>
+                            <a href="file:///C:/NetEng/startbootstrap-sb-admin-2-1.0.7/pages/index.html" class="active"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                        </li>
+                        <li class="active">
+                            <a href="./BB Calculator_files/BB Calculator.html" class="active"><i class="fa fa-gear fa-fw"></i> Setup LTE<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level collapse in">
+                                <li class="active">
+                                  <a href="./BB Calculator_files/BB Calculator.html" class="active"><div class="toggle btn btn-default off btn-xs" data-toggle="toggle" style="width: 100%; height: 22px;"><input style="right: 0px;" type="checkbox" data-on="LTE ON" data-off="LTE OFF" data-toggle="toggle" data-size="mini" data-width="100%"><div class="toggle-group"><label class="btn btn-primary btn-xs toggle-on">LTE ON</label><label class="btn btn-default btn-xs active toggle-off">LTE OFF</label><span class="toggle-handle btn btn-default btn-xs"></span></div></div></a>
+                                  <ul class="nav nav-second-level collapse in">
+                                      <li>
+                                        <a href="./BB Calculator_files/BB Calculator.html" class="active"><div class="toggle btn btn-default off btn-xs" data-toggle="toggle" style="width: 34px; height: 22px;"><input type="checkbox" data-toggle="toggle" data-size="mini"><div class="toggle-group"><label class="btn btn-primary btn-xs toggle-on">On</label><label class="btn btn-default btn-xs active toggle-off">Off</label><span class="toggle-handle btn btn-default btn-xs"></span></div></div> Basic Cell Set (BCS)</a>
+                                      </li>
+                                      <li>
+                                          <a href="./BB Calculator_files/BB Calculator.html" class="active"><div class="toggle btn btn-default off btn-xs" data-toggle="toggle" style="width: 34px; height: 22px;"><input type="checkbox" data-toggle="toggle" data-size="mini"><div class="toggle-group"><label class="btn btn-primary btn-xs toggle-on">On</label><label class="btn btn-default btn-xs active toggle-off">Off</label><span class="toggle-handle btn btn-default btn-xs"></span></div></div> Extended Cell Set (ECS)</a>
+                                      </li>
+                                      <li>
+                                        <a href="./BB Calculator_files/BB Calculator.html" class="active"><div class="toggle btn btn-default off btn-xs" data-toggle="toggle" style="width: 34px; height: 22px;"><input type="checkbox" data-toggle="toggle" data-size="mini"><div class="toggle-group"><label class="btn btn-primary btn-xs toggle-on">On</label><label class="btn btn-default btn-xs active toggle-off">Off</label><span class="toggle-handle btn btn-default btn-xs"></span></div></div> Reduced Cell Set (RCS)</a>
+                                    </li>
+                                  </ul>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li class="active">
+                            <a href="./BB Calculator_files/BB Calculator.html" class="active"><i class="fa fa-gear fa-fw"></i> Setup WCDMA<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level collapse in">
+                                <li class="active">
+                                  <a href="./BB Calculator_files/BB Calculator.html" class="active"><div class="toggle btn btn-default off btn-xs" data-toggle="toggle" style="width: 100%; height: 22px;"><input style="right: 0px;" type="checkbox" data-on="WCDMA ON" data-off="WCDMA OFF" data-toggle="toggle" data-size="mini" data-width="100%" data-onstyle="warning"><div class="toggle-group"><label class="btn btn-warning btn-xs toggle-on">WCDMA ON</label><label class="btn btn-default btn-xs active toggle-off">WCDMA OFF</label><span class="toggle-handle btn btn-default btn-xs"></span></div></div></a>
+                                  <ul class="nav nav-second-level collapse in">
+                                    <li>
+                                      <a href="./BB Calculator_files/BB Calculator.html" class="active">
+                                        <select class="form-control" id="sel1">
+                                          <option value="1">1</option>
+                                          <option value="2">2</option>
+                                          <option value="3">3</option>
+                                          <option value="4">4</option>
+                                        </select>
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li class="active">
+                            <a href="./BB Calculator_files/BB Calculator.html" class="active"><i class="fa fa-gear fa-fw"></i> Setup GSM<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level collapse in">
+                                <li>
+                                  <a href="./BB Calculator_files/BB Calculator.html" class="active"><div class="toggle btn btn-default off btn-xs" data-toggle="toggle" style="width: 100%; height: 22px;"><input style="right: 0px;" type="checkbox" data-on="GSM ON" data-off="GSM OFF" data-toggle="toggle" data-size="mini" data-width="100%" data-onstyle="success"><div class="toggle-group"><label class="btn btn-success btn-xs toggle-on">GSM ON</label><label class="btn btn-default btn-xs active toggle-off">GSM OFF</label><span class="toggle-handle btn btn-default btn-xs"></span></div></div></a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper" style="min-height: 690px;">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Dashboard</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-9">
+                                    <div class="huge">LTE BB Capacity</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="./BB Calculator_files/BB Calculator.html">
+                            <div class="panel-footer" ng-click="viewLteDetails = !viewLteDetails">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="panel panel-info ng-hide" ng-show="viewLteDetails">
+                      <div class="panel-heading">
+                        <h3>hello world</h3>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-yellow">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="huge">WCDMA BB Capacity</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="./BB Calculator_files/BB Calculator.html">
+                            <div class="panel-footer" ng-click="view3gDetails = !view3gDetails">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="panel panel-warning ng-hide" ng-show="view3gDetails">
+                      <div class="panel-heading">
+                        <h3>hello world</h3>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-green">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-9">
+                                    <div class="huge">GSM BB Capacity</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="./BB Calculator_files/BB Calculator.html">
+                            <div class="panel-footer" ng-click="view2gDetails = !view2gDetails">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="panel panel-success ng-hide" ng-show="view2gDetails">
+                      <div class="panel-heading">
+                        <h3>hello world</h3>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-red">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="huge">SBTS SM Configuration</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="./BB Calculator_files/BB Calculator.html">
+                            <div class="panel-footer" ng-click="viewConfDetails = !viewConfDetails">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="panel panel-danger   ng-hide" ng-show="viewConfDetails">
+                      <div class="panel-heading">
+                        <h3>hello world</h3>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-bar-chart-o fa-fw"></i> Area Chart Example
+                            <div class="pull-right">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                        Actions
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu pull-right" role="menu">
+                                        <li><a href="./BB Calculator_files/BB Calculator.html">Action</a>
+                                        </li>
+                                        <li><a href="./BB Calculator_files/BB Calculator.html">Another action</a>
+                                        </li>
+                                        <li><a href="./BB Calculator_files/BB Calculator.html">Something else here</a>
+                                        </li>
+                                        <li class="divider"></li>
+                                        <li><a href="./BB Calculator_files/BB Calculator.html">Separated link</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div id="morris-area-chart" style="position: relative; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><svg height="347" version="1.1" width="806" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="overflow: hidden; position: relative;"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.1.2</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs><text x="50.5" y="313" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">0</tspan></text><path fill="none" stroke="#aaaaaa" d="M63,313H781" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="50.5" y="241" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">7,500</tspan></text><path fill="none" stroke="#aaaaaa" d="M63,241H781" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="50.5" y="169" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">15,000</tspan></text><path fill="none" stroke="#aaaaaa" d="M63,169H781" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="50.5" y="97.00000000000003" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4.000000000000028" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">22,500</tspan></text><path fill="none" stroke="#aaaaaa" d="M63,97.00000000000003H781" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="50.5" y="25" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">30,000</tspan></text><path fill="none" stroke="#aaaaaa" d="M63,25H781" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="648.3924665856622" y="325.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2012</tspan></text><text x="329.9599027946537" y="325.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2011</tspan></text><path fill="#7cb47c" stroke="none" d="M63,261.9952C83.06561360874848,256.7152,123.19684082624543,245.758,143.2624544349939,240.8752C163.3280680437424,235.9924,203.45929526123936,229.61712786885246,223.52490886998785,222.93280000000001C243.37241798298908,216.32112786885247,283.0674362089915,189.66403977900552,302.9149453219927,187.6912C322.5443499392467,185.74003977900554,361.8031591737545,205.80194285714288,381.4325637910085,207.23680000000002C401.49817739975697,208.70354285714288,441.6294046172539,198.32080000000002,461.6950182260024,199.29760000000002C481.7606318347509,200.2744,521.8918590522478,232.39063606557377,541.9574726609964,215.0512C561.8049817739975,197.90023606557378,601.5,69.70240000000001,621.3475091130011,61.33600000000001C641.1950182260024,52.96960000000001,680.8900364520048,135.85260327868852,700.737545565006,148.12C720.8031591737545,160.52220327868852,760.9343863912516,157.04080000000002,781,160.01440000000002L781,313L63,313Z" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></path><path fill="none" stroke="#4da74d" d="M63,261.9952C83.06561360874848,256.7152,123.19684082624543,245.758,143.2624544349939,240.8752C163.3280680437424,235.9924,203.45929526123936,229.61712786885246,223.52490886998785,222.93280000000001C243.37241798298908,216.32112786885247,283.0674362089915,189.66403977900552,302.9149453219927,187.6912C322.5443499392467,185.74003977900554,361.8031591737545,205.80194285714288,381.4325637910085,207.23680000000002C401.49817739975697,208.70354285714288,441.6294046172539,198.32080000000002,461.6950182260024,199.29760000000002C481.7606318347509,200.2744,521.8918590522478,232.39063606557377,541.9574726609964,215.0512C561.8049817739975,197.90023606557378,601.5,69.70240000000001,621.3475091130011,61.33600000000001C641.1950182260024,52.96960000000001,680.8900364520048,135.85260327868852,700.737545565006,148.12C720.8031591737545,160.52220327868852,760.9343863912516,157.04080000000002,781,160.01440000000002" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><circle cx="63" cy="261.9952" r="2" fill="#4da74d" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="143.2624544349939" cy="240.8752" r="2" fill="#4da74d" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="223.52490886998785" cy="222.93280000000001" r="2" fill="#4da74d" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="302.9149453219927" cy="187.6912" r="2" fill="#4da74d" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="381.4325637910085" cy="207.23680000000002" r="2" fill="#4da74d" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="461.6950182260024" cy="199.29760000000002" r="2" fill="#4da74d" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="541.9574726609964" cy="215.0512" r="2" fill="#4da74d" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="621.3475091130011" cy="61.33600000000001" r="2" fill="#4da74d" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="700.737545565006" cy="148.12" r="2" fill="#4da74d" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="781" cy="160.01440000000002" r="2" fill="#4da74d" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><path fill="#a7b3bc" stroke="none" d="M63,287.4064C83.06561360874848,281.632,123.19684082624543,269.3668,143.2624544349939,264.3088C163.3280680437424,259.2508,203.45929526123936,249.70782950819674,223.52490886998785,246.94240000000002C243.37241798298908,244.20702950819674,283.0674362089915,244.5294187845304,302.9149453219927,242.30560000000003C322.5443499392467,240.1062187845304,361.8031591737545,232.33412747252746,381.4325637910085,229.2496C401.49817739975697,226.09652747252747,441.6294046172539,217.22440000000003,461.6950182260024,217.35520000000002C481.7606318347509,217.48600000000002,521.8918590522478,243.66103606557377,541.9574726609964,230.296C561.8049817739975,217.07623606557377,601.5,118.85440000000001,621.3475091130011,111.01600000000002C641.1950182260024,103.17760000000001,680.8900364520048,159.3600131147541,700.737545565006,167.58880000000002C720.8031591737545,175.9080131147541,760.9343863912516,174.8032,781,177.208L781,313L63,313Z" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></path><path fill="none" stroke="#7a92a3" d="M63,287.4064C83.06561360874848,281.632,123.19684082624543,269.3668,143.2624544349939,264.3088C163.3280680437424,259.2508,203.45929526123936,249.70782950819674,223.52490886998785,246.94240000000002C243.37241798298908,244.20702950819674,283.0674362089915,244.5294187845304,302.9149453219927,242.30560000000003C322.5443499392467,240.1062187845304,361.8031591737545,232.33412747252746,381.4325637910085,229.2496C401.49817739975697,226.09652747252747,441.6294046172539,217.22440000000003,461.6950182260024,217.35520000000002C481.7606318347509,217.48600000000002,521.8918590522478,243.66103606557377,541.9574726609964,230.296C561.8049817739975,217.07623606557377,601.5,118.85440000000001,621.3475091130011,111.01600000000002C641.1950182260024,103.17760000000001,680.8900364520048,159.3600131147541,700.737545565006,167.58880000000002C720.8031591737545,175.9080131147541,760.9343863912516,174.8032,781,177.208" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><circle cx="63" cy="287.4064" r="2" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="143.2624544349939" cy="264.3088" r="2" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="223.52490886998785" cy="246.94240000000002" r="2" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="302.9149453219927" cy="242.30560000000003" r="2" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="381.4325637910085" cy="229.2496" r="2" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="461.6950182260024" cy="217.35520000000002" r="2" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="541.9574726609964" cy="230.296" r="2" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="621.3475091130011" cy="111.01600000000002" r="2" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="700.737545565006" cy="167.58880000000002" r="2" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="781" cy="177.208" r="2" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><path fill="#2577b5" stroke="none" d="M63,287.4064C83.06561360874848,287.1376,123.19684082624543,289.0264,143.2624544349939,286.3312C163.3280680437424,283.636,203.45929526123936,267.03808524590164,223.52490886998785,265.8448C243.37241798298908,264.66448524590163,283.0674362089915,279.1269834254143,302.9149453219927,276.8368C322.5443499392467,274.57178342541437,361.8031591737545,249.88250549450552,381.4325637910085,247.62400000000002C401.49817739975697,245.3153054945055,441.6294046172539,256.18,461.6950182260024,258.568C481.7606318347509,260.95599999999996,521.8918590522478,278.0732590163935,541.9574726609964,266.728C561.8049817739975,255.50605901639346,601.5,175.33960000000002,621.3475091130011,168.2992C641.1950182260024,161.2588,680.8900364520048,202.47914754098363,700.737545565006,210.40480000000002C720.8031591737545,218.41754754098363,760.9343863912516,226.6408,781,232.0528L781,313L63,313Z" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></path><path fill="none" stroke="#0b62a4" d="M63,287.4064C83.06561360874848,287.1376,123.19684082624543,289.0264,143.2624544349939,286.3312C163.3280680437424,283.636,203.45929526123936,267.03808524590164,223.52490886998785,265.8448C243.37241798298908,264.66448524590163,283.0674362089915,279.1269834254143,302.9149453219927,276.8368C322.5443499392467,274.57178342541437,361.8031591737545,249.88250549450552,381.4325637910085,247.62400000000002C401.49817739975697,245.3153054945055,441.6294046172539,256.18,461.6950182260024,258.568C481.7606318347509,260.95599999999996,521.8918590522478,278.0732590163935,541.9574726609964,266.728C561.8049817739975,255.50605901639346,601.5,175.33960000000002,621.3475091130011,168.2992C641.1950182260024,161.2588,680.8900364520048,202.47914754098363,700.737545565006,210.40480000000002C720.8031591737545,218.41754754098363,760.9343863912516,226.6408,781,232.0528" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><circle cx="63" cy="287.4064" r="2" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="143.2624544349939" cy="286.3312" r="2" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="223.52490886998785" cy="265.8448" r="2" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="302.9149453219927" cy="276.8368" r="2" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="381.4325637910085" cy="247.62400000000002" r="2" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="461.6950182260024" cy="258.568" r="2" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="541.9574726609964" cy="266.728" r="2" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="621.3475091130011" cy="168.2992" r="2" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="700.737545565006" cy="210.40480000000002" r="2" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="781" cy="232.0528" r="2" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle></svg><div class="morris-hover morris-default-style" style="display: none;"></div></div>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-bar-chart-o fa-fw"></i> Bar Chart Example
+                            <div class="pull-right">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                        Actions
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu pull-right" role="menu">
+                                        <li><a href="./BB Calculator_files/BB Calculator.html">Action</a>
+                                        </li>
+                                        <li><a href="./BB Calculator_files/BB Calculator.html">Another action</a>
+                                        </li>
+                                        <li><a href="./BB Calculator_files/BB Calculator.html">Something else here</a>
+                                        </li>
+                                        <li class="divider"></li>
+                                        <li><a href="./BB Calculator_files/BB Calculator.html">Separated link</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered table-hover table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Date</th>
+                                                    <th>Time</th>
+                                                    <th>Amount</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>3326</td>
+                                                    <td>10/21/2013</td>
+                                                    <td>3:29 PM</td>
+                                                    <td>$321.33</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3325</td>
+                                                    <td>10/21/2013</td>
+                                                    <td>3:20 PM</td>
+                                                    <td>$234.34</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3324</td>
+                                                    <td>10/21/2013</td>
+                                                    <td>3:03 PM</td>
+                                                    <td>$724.17</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3323</td>
+                                                    <td>10/21/2013</td>
+                                                    <td>3:00 PM</td>
+                                                    <td>$23.71</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3322</td>
+                                                    <td>10/21/2013</td>
+                                                    <td>2:49 PM</td>
+                                                    <td>$8345.23</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3321</td>
+                                                    <td>10/21/2013</td>
+                                                    <td>2:23 PM</td>
+                                                    <td>$245.12</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3320</td>
+                                                    <td>10/21/2013</td>
+                                                    <td>2:15 PM</td>
+                                                    <td>$5663.54</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3319</td>
+                                                    <td>10/21/2013</td>
+                                                    <td>2:13 PM</td>
+                                                    <td>$943.45</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- /.table-responsive -->
+                                </div>
+                                <!-- /.col-lg-4 (nested) -->
+                                <div class="col-lg-8">
+                                    <div id="morris-bar-chart" style="position: relative; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><svg height="347" version="1.1" width="527" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="overflow: hidden; position: relative; left: -0.65625px;"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.1.2</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs><text x="33.5" y="313" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">0</tspan></text><path fill="none" stroke="#aaaaaa" d="M46,313H502" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="33.5" y="241" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">25</tspan></text><path fill="none" stroke="#aaaaaa" d="M46,241H502" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="33.5" y="169" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">50</tspan></text><path fill="none" stroke="#aaaaaa" d="M46,169H502" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="33.5" y="97" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">75</tspan></text><path fill="none" stroke="#aaaaaa" d="M46,97H502" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="33.5" y="25" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">100</tspan></text><path fill="none" stroke="#aaaaaa" d="M46,25H502" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="469.42857142857144" y="325.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2012</tspan></text><text x="339.14285714285717" y="325.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2010</tspan></text><text x="208.85714285714286" y="325.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2008</tspan></text><text x="78.57142857142857" y="325.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2006</tspan></text><rect x="54.14285714285714" y="25" width="22.928571428571427" height="288" rx="0" ry="0" fill="#0b62a4" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="80.07142857142857" y="53.80000000000001" width="22.928571428571427" height="259.2" rx="0" ry="0" fill="#7a92a3" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="119.28571428571428" y="97" width="22.928571428571427" height="216" rx="0" ry="0" fill="#0b62a4" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="145.2142857142857" y="125.80000000000001" width="22.928571428571427" height="187.2" rx="0" ry="0" fill="#7a92a3" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="184.42857142857142" y="169" width="22.928571428571427" height="144" rx="0" ry="0" fill="#0b62a4" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="210.35714285714283" y="197.8" width="22.928571428571427" height="115.19999999999999" rx="0" ry="0" fill="#7a92a3" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="249.57142857142856" y="97" width="22.928571428571427" height="216" rx="0" ry="0" fill="#0b62a4" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="275.5" y="125.80000000000001" width="22.928571428571427" height="187.2" rx="0" ry="0" fill="#7a92a3" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="314.7142857142857" y="169" width="22.928571428571427" height="144" rx="0" ry="0" fill="#0b62a4" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="340.64285714285717" y="197.8" width="22.928571428571427" height="115.19999999999999" rx="0" ry="0" fill="#7a92a3" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="379.85714285714283" y="97" width="22.928571428571427" height="216" rx="0" ry="0" fill="#0b62a4" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="405.7857142857143" y="125.80000000000001" width="22.928571428571427" height="187.2" rx="0" ry="0" fill="#7a92a3" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="445" y="25" width="22.928571428571427" height="288" rx="0" ry="0" fill="#0b62a4" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="470.92857142857144" y="53.80000000000001" width="22.928571428571427" height="259.2" rx="0" ry="0" fill="#7a92a3" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect></svg><div class="morris-hover morris-default-style" style="display: none;"></div></div>
+                                </div>
+                                <!-- /.col-lg-8 (nested) -->
+                            </div>
+                            <!-- /.row -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-8 -->
+                <div class="col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-bell fa-fw"></i> Notifications Panel
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="list-group">
+                                <a href="./BB Calculator_files/BB Calculator.html" class="list-group-item">
+                                    <i class="fa fa-comment fa-fw"></i> New Comment
+                                    <span class="pull-right text-muted small"><em>4 minutes ago</em>
+                                    </span>
+                                </a>
+                                <a href="./BB Calculator_files/BB Calculator.html" class="list-group-item">
+                                    <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                                    <span class="pull-right text-muted small"><em>12 minutes ago</em>
+                                    </span>
+                                </a>
+                                <a href="./BB Calculator_files/BB Calculator.html" class="list-group-item">
+                                    <i class="fa fa-envelope fa-fw"></i> Message Sent
+                                    <span class="pull-right text-muted small"><em>27 minutes ago</em>
+                                    </span>
+                                </a>
+                                <a href="./BB Calculator_files/BB Calculator.html" class="list-group-item">
+                                    <i class="fa fa-tasks fa-fw"></i> New Task
+                                    <span class="pull-right text-muted small"><em>43 minutes ago</em>
+                                    </span>
+                                </a>
+                                <a href="./BB Calculator_files/BB Calculator.html" class="list-group-item">
+                                    <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                    <span class="pull-right text-muted small"><em>11:32 AM</em>
+                                    </span>
+                                </a>
+                                <a href="./BB Calculator_files/BB Calculator.html" class="list-group-item">
+                                    <i class="fa fa-bolt fa-fw"></i> Server Crashed!
+                                    <span class="pull-right text-muted small"><em>11:13 AM</em>
+                                    </span>
+                                </a>
+                                <a href="./BB Calculator_files/BB Calculator.html" class="list-group-item">
+                                    <i class="fa fa-warning fa-fw"></i> Server Not Responding
+                                    <span class="pull-right text-muted small"><em>10:57 AM</em>
+                                    </span>
+                                </a>
+                                <a href="./BB Calculator_files/BB Calculator.html" class="list-group-item">
+                                    <i class="fa fa-shopping-cart fa-fw"></i> New Order Placed
+                                    <span class="pull-right text-muted small"><em>9:49 AM</em>
+                                    </span>
+                                </a>
+                                <a href="./BB Calculator_files/BB Calculator.html" class="list-group-item">
+                                    <i class="fa fa-money fa-fw"></i> Payment Received
+                                    <span class="pull-right text-muted small"><em>Yesterday</em>
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- /.list-group -->
+                            <a href="./BB Calculator_files/BB Calculator.html" class="btn btn-default btn-block">View All Alerts</a>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-bar-chart-o fa-fw"></i> Donut Chart Example
+                        </div>
+                        <div class="panel-body">
+                            <div id="morris-donut-chart"><svg height="347" version="1.1" width="372" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="overflow: hidden; position: relative;"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.1.2</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs><path fill="none" stroke="#0b62a4" d="M186,286.6666666666667A110.66666666666667,110.66666666666667,0,0,0,290.48523596313163,212.46843260739092" stroke-width="2" opacity="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;"></path><path fill="#0b62a4" stroke="#ffffff" d="M186,289.6666666666667A113.66666666666667,113.66666666666667,0,0,0,293.3176670585177,213.45703469614548L338.0071354523873,229.05497876316207A161,161,0,0,1,186,337Z" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#3980b5" d="M290.48523596313163,212.46843260739092A110.66666666666667,110.66666666666667,0,0,0,86.72450623569789,127.09716318080183" stroke-width="2" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1;"></path><path fill="#3980b5" stroke="#ffffff" d="M293.3176670585177,213.45703469614548A113.66666666666667,113.66666666666667,0,0,0,84.03330309148488,125.77148386943801L37.086759353546825,102.64574477120273A166,166,0,0,1,342.7278539446975,230.70264891108636Z" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#679dc6" d="M86.72450623569789,127.09716318080183A110.66666666666667,110.66666666666667,0,0,0,185.9652330418721,286.66666120548564" stroke-width="2" opacity="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;"></path><path fill="#679dc6" stroke="#ffffff" d="M84.03330309148488,125.77148386943801A113.66666666666667,113.66666666666667,0,0,0,185.9642905640915,289.66666105744156L185.9494203591091,336.9999920549685A161,161,0,0,1,41.57209792723518,104.85521029014241Z" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="186" y="166" text-anchor="middle" font-family="&quot;Arial&quot;" font-size="15px" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: Arial; font-size: 15px; font-weight: 800;" font-weight="800" transform="matrix(1.7172,0,0,1.7172,-133.4069,-126.9517)" stroke-width="0.5823293172690762"><tspan dy="6" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">In-Store Sales</tspan></text><text x="186" y="186" text-anchor="middle" font-family="&quot;Arial&quot;" font-size="14px" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: Arial; font-size: 14px;" transform="matrix(2.3056,0,0,2.3056,-242.8333,-232.3889)" stroke-width="0.4337349397590361"><tspan dy="5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">30</tspan></text></svg></div>
+                            <a href="./BB Calculator_files/BB Calculator.html" class="btn btn-default btn-block">View Details</a>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                    <div class="chat-panel panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-comments fa-fw"></i>
+                            Chat
+                            <div class="btn-group pull-right">
+                                <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-chevron-down"></i>
+                                </button>
+                                <ul class="dropdown-menu slidedown">
+                                    <li>
+                                        <a href="./BB Calculator_files/BB Calculator.html">
+                                            <i class="fa fa-refresh fa-fw"></i> Refresh
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./BB Calculator_files/BB Calculator.html">
+                                            <i class="fa fa-check-circle fa-fw"></i> Available
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./BB Calculator_files/BB Calculator.html">
+                                            <i class="fa fa-times fa-fw"></i> Busy
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./BB Calculator_files/BB Calculator.html">
+                                            <i class="fa fa-clock-o fa-fw"></i> Away
+                                        </a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a href="./BB Calculator_files/BB Calculator.html">
+                                            <i class="fa fa-sign-out fa-fw"></i> Sign Out
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <ul class="chat">
+                                <li class="left clearfix">
+                                    <span class="chat-img pull-left">
+                                        <img src="./BB Calculator_files/fff" alt="User Avatar" class="img-circle">
+                                    </span>
+                                    <div class="chat-body clearfix">
+                                        <div class="header">
+                                            <strong class="primary-font">Jack Sparrow</strong>
+                                            <small class="pull-right text-muted">
+                                                <i class="fa fa-clock-o fa-fw"></i> 12 mins ago
+                                            </small>
+                                        </div>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="right clearfix">
+                                    <span class="chat-img pull-right">
+                                        <img src="./BB Calculator_files/fff(1)" alt="User Avatar" class="img-circle">
+                                    </span>
+                                    <div class="chat-body clearfix">
+                                        <div class="header">
+                                            <small class=" text-muted">
+                                                <i class="fa fa-clock-o fa-fw"></i> 13 mins ago</small>
+                                            <strong class="pull-right primary-font">Bhaumik Patel</strong>
+                                        </div>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="left clearfix">
+                                    <span class="chat-img pull-left">
+                                        <img src="./BB Calculator_files/fff" alt="User Avatar" class="img-circle">
+                                    </span>
+                                    <div class="chat-body clearfix">
+                                        <div class="header">
+                                            <strong class="primary-font">Jack Sparrow</strong>
+                                            <small class="pull-right text-muted">
+                                                <i class="fa fa-clock-o fa-fw"></i> 14 mins ago</small>
+                                        </div>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="right clearfix">
+                                    <span class="chat-img pull-right">
+                                        <img src="./BB Calculator_files/fff(1)" alt="User Avatar" class="img-circle">
+                                    </span>
+                                    <div class="chat-body clearfix">
+                                        <div class="header">
+                                            <small class=" text-muted">
+                                                <i class="fa fa-clock-o fa-fw"></i> 15 mins ago</small>
+                                            <strong class="pull-right primary-font">Bhaumik Patel</strong>
+                                        </div>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /.panel-body -->
+                        <div class="panel-footer">
+                            <div class="input-group">
+                                <input id="btn-input" type="text" class="form-control input-sm" placeholder="Type your message here...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-warning btn-sm" id="btn-chat">
+                                        Send
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                        <!-- /.panel-footer -->
+                    </div>
+                    <!-- /.panel .chat-panel -->
+                </div>
+                <!-- /.col-lg-4 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="./BB Calculator_files/jquery.min.js"></script>
+    <script src="./BB Calculator_files/bootstrap-toggle.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="./BB Calculator_files/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="./BB Calculator_files/metisMenu.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="./BB Calculator_files/raphael-min.js"></script>
+    <script src="./BB Calculator_files/morris.min.js"></script>
+    <script src="./BB Calculator_files/morris-data.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="./BB Calculator_files/sb-admin-2.js"></script>
+    <script src="./BB Calculator_files/angular.js"></script>
+    <script src="./BB Calculator_files/main.js"></script>
+
+
+
+</body></html>

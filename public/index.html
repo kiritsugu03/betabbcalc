@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="bbcalc">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>BB Calculator</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!--Toggle-->
+    <link href="css/bootstrap-toggle.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body ng-controller="main">
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Baseband Calculator</a>
+            </div>
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                            </div>
+                            <!-- /input-group -->
+                        </li>
+                        <li>
+                            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa fa-gear fa-fw"></i> Setup LTE<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                  <a href="" ng-click="isLteOn = !isLteOn"><input style="right: 0px;" type="checkbox" data-on="LTE ON" data-off="LTE OFF" data-toggle="toggle" data-size="mini"  data-width="100%"></a>
+                                  <ul class="nav nav-second-level">
+                                      <li>
+                                        <a href="#" ng-click="isBcsOn = !isBcsOn"><input type="checkbox" data-toggle="toggle" data-size="mini"> Basic Cell Set (BCS)</a>
+                                      </li>
+                                      <li>
+                                          <a href="#" ng-click="isEcsOn = !isEcsOn"><input type="checkbox" data-toggle="toggle" data-size="mini"> Extended Cell Set (ECS)</a>
+                                      </li>
+                                      <li>
+                                        <a href="#" ng-click="isRcsOn = !isRcsOn"><input type="checkbox" data-toggle="toggle" data-size="mini"> Reduced Cell Set (RCS)</a>
+                                    </li>
+                                  </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-gear fa-fw"></i> Setup WCDMA<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                  <a href="#" ng-click="isWcdmaOn = !isWcdmaOn; objFilter.wcdmaSu = isWcdmaOn ? objFilter.wcdmaSu : ''"><input style="right: 0px;" type="checkbox" data-on="WCDMA ON" data-off="WCDMA OFF" data-toggle="toggle" data-size="mini"  data-width="100%" data-onstyle="warning"></a>
+                                  <ul class="nav nav-second-level">
+                                    <li>
+                                      <a href="#">
+                                        <select class="form-control" id="sel1" ng-model="objFilter.wcdmaSu">
+                                          <option value="3.5">3.5</option>
+                                          <option value="5.5">5.5</option>
+                                          <option value="9.5">9.5</option>
+                                          <option value="11.5">11.5</option>
+                                          <option value="15.5">15.5</option>
+                                          <option value="17.5">17.5</option>
+                                        </select>
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-gear fa-fw"></i> Setup GSM<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                  <a href="#" ng-click="isGsmOn = !isGsmOn; objFilter.gsmBbCapacity = isGsmOn ? '24': ''"><input style="right: 0px;" type="checkbox" data-on="GSM ON" data-off="GSM OFF" data-toggle="toggle" data-size="mini"  data-width="100%" data-onstyle="success"></a>
+                                  <ul class="nav nav-second-level">
+                                    <li>
+                                      <a href="#">
+                                        <select class="form-control" id="sel1" ng-model="objFilter.gsmBbCapacity">
+                                          <option value="24" selected>24 TRX</option>
+                                        </select>
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Dashboard</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-9">
+                                    <div class="huge">LTE BB Capacity</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer" ng-click="viewLteDetails = !viewLteDetails">
+                                <span class="pull-left" >View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="panel panel-info" ng-show="viewLteDetails">
+                      <div class="panel-heading">
+                        <h3>hello world</h3>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-yellow">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="huge">WCDMA BB Capacity</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer" ng-click="view3gDetails = !view3gDetails">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="panel panel-warning" ng-show="view3gDetails">
+                      <div class="panel-heading">
+                        <h3>hello world</h3>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-green">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-9">
+                                    <div class="huge">GSM BB Capacity</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer" ng-click="view2gDetails = !view2gDetails">
+                                <span class="pull-left" >View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="panel panel-success" ng-show="view2gDetails">
+                      <div class="panel-heading">
+                        <h3>hello world</h3>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-red">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="huge">SBTS SM Configuration</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer" ng-click="viewConfDetails = !viewConfDetails">
+                                <span class="pull-left" >View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="panel panel-danger  " ng-show="viewConfDetails">
+                      <div class="panel-heading">
+                        <h3>hello world</h3>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-8">
+                  <table class="table table-striped table-bordered col-lg-8">
+                      <tr>
+                        <th rowspan="2">SBTS SM configuration</th>
+                        <th colspan="3">SM1 deployment</th>
+                        <th colspan="3">SM2 Deployment</th>
+                        <th colspan="3">LTE BB capacity</th>
+                        <th>WCDMA BB capacity</th>
+                        <th>GSM BB capacity</th>
+                      </tr>
+                    <tr>
+                      <th>FSMF_1</th>
+                      <th>FBBx_1.1</th>
+                      <th>FBBX_1.2</th>
+                      <th>FSMF_2</th>
+                      <th>FBBx_2.1</th>
+                      <th>FBBX_2.2</th>
+                      <th>#RCS</th>
+                      <th>#BCS</th>
+                      <th>#ECS</th>
+                      <th>#SU</th>
+                      <th>#TRXs</th>
+                    </tr>
+                    <tr ng-repeat="config in data | filter:{'gsmBbCapacity':objFilter.gsmBbCapacity, 'wcdmaSu':objFilter.wcdmaSu} | filter:filterRcs | filter:filterEcs | filter:filterBcs">
+                      <td>{{config.sbtsSmConfiguration}}</td>
+                      <td>{{config.sm1Deployment.fsmf1}}</td>
+                      <td>{{config.sm1Deployment.fbbx1}}</td>
+                      <td>{{config.sm1Deployment.fbbx2}}</td>
+                      <td>{{config.sm2Deployment.fsmf1}}</td>
+                      <td>{{config.sm2Deployment.fbbx1}}</td>
+                      <td>{{config.sm2Deployment.fbbx2}}</td>
+                      <td>{{config.lteBbCapacity.rcs}}</td>
+                      <td>{{config.lteBbCapacity.bcs}}</td>
+                      <td>{{config.lteBbCapacity.ecs}}</td>
+                      <td>{{config.wcdmaSu}}</td>
+                      <td>{{config.gsmBbCapacity}}</td>
+                    </tr>
+                  </table>
+                </div>
+                <!-- /.col-lg-8 -->
+                <div class="col-lg-4">
+                </div>
+                <!-- /.col-lg-4 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="js/bootstrap-toggle.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="bower_components/metisMenu/dist/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="dist/js/sb-admin-2.js"></script>
+    <script src="js/angular.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
