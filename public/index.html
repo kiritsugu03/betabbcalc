@@ -27,7 +27,30 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    <style>
+      .deployment .first, .deployment .second{
+        border:solid;
+        margin:0 auto 1em auto;
+        width:80%;
+        padding: 5px;
+        text-align: center;
+        height:100px;
+      }
+      .deployment .first div, .deployment .second div{
+        border: 1px solid;
+        margin:5px 0;
+      }
+      .deployment .fbbx1{
+        width:45%;
+        display:inline-block;
+        float:left;
+      }
+      .deployment .fbbx2{
+        width:45%;
+        display:inline-block;
+        float:right;
+      }
+    </style>
 </head>
 
 <body ng-controller="main">
@@ -255,7 +278,7 @@
                       <th>#SU</th>
                       <th>#TRXs</th>
                     </tr>
-                    <tr ng-repeat="config in data | filter:{'gsmBbCapacity':objFilter.gsmBbCapacity, 'wcdmaSu':objFilter.wcdmaSu} | filter:filterRcs | filter:filterEcs | filter:filterBcs">
+                    <tr  ng-repeat="config in data | filter:{'gsmBbCapacity':objFilter.gsmBbCapacity, 'wcdmaSu':objFilter.wcdmaSu} | filter:filterRcs | filter:filterEcs | filter:filterBcs">
                       <td>{{config.sbtsSmConfiguration}}</td>
                       <td>{{config.sm1Deployment.fsmf1}}</td>
                       <td>{{config.sm1Deployment.fbbx1}}</td>
@@ -273,6 +296,32 @@
                 </div>
                 <!-- /.col-lg-8 -->
                 <div class="col-lg-4">
+                    <div class="deployment" ng-repeat="config in data | filter:{'gsmBbCapacity':objFilter.gsmBbCapacity, 'wcdmaSu':objFilter.wcdmaSu} | filter:filterRcs | filter:filterEcs | filter:filterBcs">
+                         <div class="first">
+                            <div class="fsmf">
+                            {{config.sbtsSmConfiguration.split('+')[0]}} {{config.sm1Deployment.fsmf1}}
+                            </div>
+                            <div class="fbbx1" ng-show="config.sbtsSmConfiguration.split('+')[1]">
+                            {{config.sbtsSmConfiguration.split('+')[1]}} {{config.sm1Deployment.fbbx1}}
+                            </div>
+                            <div class="fbbx2" ng-show="config.sbtsSmConfiguration.split('+')[2]">
+                            {{config.sbtsSmConfiguration.split('+')[2]}} {{config.sm1Deployment.fbbx2}}
+                            </div>
+                        </div>
+
+                         <div class="second" ng-show="config.sbtsSmConfiguration.split('+')[3]">
+                            <div class="fsmf">
+                            {{config.sbtsSmConfiguration.split('+')[3]}} {{config.sm2Deployment.fsmf1}}
+                            </div>
+                            <div class="fbbx1" ng-show="config.sbtsSmConfiguration.split('+')[4]">
+                            {{config.sbtsSmConfiguration.split('+')[4]}} {{config.sm2Deployment.fbbx1}}
+                            </div>
+                            <div class="fbbx2" ng-show="config.sbtsSmConfiguration.split('+')[5]">
+                            {{config.sbtsSmConfiguration.split('+')[5]}} {{config.sm2Deployment.fbbx2}}
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
                 <!-- /.col-lg-4 -->
             </div>
