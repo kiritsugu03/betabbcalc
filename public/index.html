@@ -270,11 +270,6 @@
                             </div>
                         </a>
                     </div>
-                    <div class="panel panel-info" ng-show="viewLteDetails">
-                      <div class="panel-heading">
-                        <h3>hello world</h3>
-                      </div>
-                    </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="panel panel-yellow">
@@ -293,11 +288,6 @@
                             </div>
                         </a>
                     </div>
-                    <div class="panel panel-warning" ng-show="view3gDetails">
-                      <div class="panel-heading">
-                        <h3>hello world</h3>
-                      </div>
-                    </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="panel panel-green">
@@ -315,11 +305,6 @@
                                 <div class="clearfix"></div>
                             </div>
                         </a>
-                    </div>
-                    <div class="panel panel-success" ng-show="view2gDetails">
-                      <div class="panel-heading">
-                        <h3>hello world</h3>
-                      </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -347,6 +332,123 @@
                 </div>
             </div>
             <!-- /.row -->
+            <div class="row" ng-show="viewLteDetails">
+              <div class="col-md-6 col-lg-4">
+                <div class="panel panel-info ">
+                  <div class="panel panel-heading">
+                    <span><h5><i class="fa fa-list-alt"></i>&nbsp;Basic Cell Set (BCS) - FSMF or FBBC</h5></span>
+                  </div>
+                  <div class="panel-body">
+                    <p><i class="fa fa-check"></i>&nbsp;up to 6x10MHz / 2x2MIMO</p>
+                    <p><i class="fa fa-check"></i>&nbsp;up to 3x10MHz / 4TX/4RX</p>
+                    <p><i class="fa fa-check"></i>&nbsp;up to 3x20MHz / 2x2MIMO</p>
+                    <p><i class="fa fa-info"></i>&nbsp;4TX/4RX = 4x2 MIMO, 4X4MIMO or/and 4RX</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="panel panel-info ">
+                  <div class="panel panel-heading">
+                    <span><h5><i class="fa fa-list-alt"></i>&nbsp;Extended Cell Set (ECS) - FSMF + FBBC</h5></span>
+                  </div>
+                  <div class="panel-body">
+                    <p><i class="fa fa-check"></i>&nbsp;up to 3x20MHz / 4TX/4RX</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="panel panel-info">
+                  <div class="panel panel-heading">
+                    <span><h5><i class="fa fa-list-alt"></i>&nbsp;Reduced Cell Set (RRCS) - FSMF*</h5></span>
+                  </div>
+                  <div class="panel-body">
+                    <p><i class="fa fa-check"></i>&nbsp;up to 3x10MHz / 2x2MIMO with CoMP</p>
+                    <p><i class="fa fa-check"></i>&nbsp;up to 4x10MHz / 2x2MIMO without CoMP</p>
+                    <p><i class="fa fa-info"></i>&nbsp;*FSMF capacity is shared for LTE and GSM</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row" ng-show="view3gDetails">
+              <div class="col-lg-2 col-md-6">
+                <div class="panel panel-warning">
+                  <div class="panel-heading">
+                    <span><h5><i class="fa fa-warning"></i> WCDMA BB Capacity: 5.5 SU</h5></span>
+                  </div>
+                  <div class="panel-body">
+                    <p><i class="fa fa-check"></i> 320 HSPA users FDPCH + AMR users; or</p>
+                    <p><i class="fa fa-check"></i> 195 HSPA users nonFDPCH + AMR users</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-6">
+                <div class="panel panel-warning">
+                  <div class="panel-heading">
+                    <span><h5><i class="fa fa-warning"></i> WCDMA BB Capacity: 11.5 SU</h5></span>
+                  </div>
+                  <div class="panel-body">
+                    <p><i class="fa fa-check"></i> 640 HSPA users FDPCH + AMR users; or</p>
+                    <p><i class="fa fa-check"></i> 390 HSPA users nonFDPCH + AMR users</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-6">
+                <div class="panel panel-warning">
+                  <div class="panel-heading">
+                    <span><h5><i class="fa fa-warning"></i> WCDMA BB Capacity: 17.5 SU</h5></span>
+                  </div>
+                  <div class="panel-body">
+                    <p><i class="fa fa-check"></i> 960 HSPA users FDPCH + AMR users; or</p>
+                    <p><i class="fa fa-check"></i> 580 HSPA users nonFDPCH + AMR users</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-6">
+                <div class="panel panel-warning">
+                  <div class="panel-heading">
+                    <span><h5><i class="fa fa-warning"></i> WCDMA BB Capacity: 3.5 SU</h5></span>
+                  </div>
+                  <div class="panel-body">
+                    <p><i class="fa fa-check"></i> 230 HSPA users FDPCH + AMR users; or</p>
+                    <p><i class="fa fa-check"></i> 115 HSPA users nonFDPCH + AMR users</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-6">
+                <div class="panel panel-warning">
+                  <div class="panel-heading">
+                    <span><h5><i class="fa fa-warning"></i> WCDMA BB Capacity: 9.5 SU</h5></span>
+                  </div>
+                  <div class="panel-body">
+                    <p><i class="fa fa-check"></i> 560 HSPA users FDPCH + AMR users; or</p>
+                    <p><i class="fa fa-check"></i> 320 HSPA users nonFDPCH + AMR users</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-6">
+                <div class="panel panel-warning">
+                  <div class="panel-heading">
+                    <span><h5><i class="fa fa-warning"></i> WCDMA BB Capacity: 15.5 SU</h5></span>
+                  </div>
+                  <div class="panel-body">
+                    <p><i class="fa fa-check"></i> 860 HSPA users FDPCH + AMR users; or</p>
+                    <p><i class="fa fa-check"></i> 510 HSPA users nonFDPCH + AMR users</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row" ng-show="view2gDetails">
+              <div class="col-lg-12 col-md-12">
+                <div class="panel panel-success">
+                  <div class="panel-heading">
+                    <span><h5><i class="fa fa-warning"></i> Note</h5></span>
+                  </div>
+                  <div class="panel-body">
+                    <p>For now, GSM only supports 24TRXs, however, it is possible to add more TRXs supported in the future.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="row">
               <div class="col-lg-12">
                 <table class="table table-striped table-bordered col-lg-12">

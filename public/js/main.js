@@ -4,6 +4,9 @@ app.controller('main', function($scope,$http) {
     $http.get('/js/data.json').success(function(data) {
       $scope.data = data;
     });
+
+    $scope.isGsmOn = false;
+
     $scope.filterRcs = function(item){
         if ($scope.isLteOn) {
             if ($scope.isRcsOn)
