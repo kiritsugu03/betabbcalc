@@ -197,7 +197,7 @@
                         <a href="#"><i class="fa fa-gear fa-fw"></i> Setup SBTS SM <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                         <li>
-                            <a href="" ng-click="toggleDeployment1()"><input style="right: 0px;" type="checkbox" data-on="FSMF 1 ON" data-off="FSMF 1 OFF" data-toggle="toggle" data-size="mini" data-width="100%"></a>
+                            <a href="" ng-click="toggleDeployment1()"><input style="right: 0px;" type="checkbox" data-on="FSMF 1 ON" data-off="FSMF 1 OFF" data-toggle="toggle" data-size="mini" data-width="100%" data-onstyle="danger"></a>
                             <ul class="nav nav-third-level">
                               <ul class="nav nav-second-level">
                                 <li class="" >
@@ -226,7 +226,7 @@
                             </ul>
                           </li>
                           <li>
-                            <a href="" ng-click="toggleDeployment2()"><input style="right: 0px;" type="checkbox" data-on="FSMF 2 ON" data-off="FSMF 2 OFF" data-toggle="toggle" data-size="mini"  data-width="100%"></a>
+                            <a href="" ng-click="toggleDeployment2()"><input style="right: 0px;" type="checkbox" data-on="FSMF 2 ON" data-off="FSMF 2 OFF" data-toggle="toggle" data-size="mini"  data-width="100%" data-onstyle="danger"></a>
                               <ul class="nav nav-third-level">
                                 <ul class="nav nav-second-level">
                                   <li class="" >
@@ -483,8 +483,39 @@
                   <tr  ng-repeat="config in data | filter:{'gsmBbCapacity':objFilter.gsmBbCapacity, 'wcdmaSu':objFilter.wcdmaSu} | filter:filterRcs | filter:filterEcs | filter:filterBcs">
                     <td>{{getSummary(config).fsmf}}</td>
                     <td>{{getSummary(config).fbba}} {{getSummary(config).fbbc}} {{getSummary(config).fbbac}}</td>
-                    <td>{{config.wcdmaSu}}</td>
-                    <td>{{getSummary(config).bcs}} {{getSummary(config).ecs}} {{getSummary(config).rcs}}</td>
+                    <td>
+                      <a href="" title="Useful Information/s" data-toggle="popover" data-content=
+                        '<table class="table table-condensed table-striped">
+                            <tr>
+                              <th class="well" style="text-align:center;">HSPA users FDPCH</th>
+                            </tr>
+                            <tr>
+                              <td style="text-align:center;">{{getFdcph(config.wcdmaSu)}}</td>
+                            </tr>
+                            <tr>
+                              <th class="well" style="text-align:center;">HSPA users non-FDPCH</th>
+                            </tr>
+                            <tr>
+                              <td style="text-align:center;">{{getNonFdcph(config.wcdmaSu)}}</td>
+                            </tr>
+                         </table>' data-trigger="hover">
+                        {{config.wcdmaSu}}
+                      </a>
+                    </td>
+                    <td>
+                        <a href="" title="Useful Information/s" data-toggle="popover" data-content=
+                          '<img class="img-responsive" src="img/bcsInfo.png">' data-trigger="hover">
+                            {{getSummary(config).bcs}}
+                        </a>
+                        <a href="" title="Useful Information/s" data-toggle="popover" data-content=
+                          '<img class="img-responsive" src="img/ecsInfo.png">' data-trigger="hover">
+                            {{getSummary(config).ecs}}
+                        </a>
+                        <a href="" title="Useful Information/s" data-toggle="popover" data-content=
+                          '<img class="img-responsive" src="img/rcsInfo.png">' data-trigger="hover">
+                            {{getSummary(config).rcs}}
+                        </a>
+                      </td>
                     <td>{{getSummary(config).gsmTrx}}</td>
                     <td>
                       <deployment-image info="config"></deployment-image>
@@ -517,6 +548,7 @@
     <script src="js/angular.js"></script>
     <script src="js/main.js"></script>
     <script src="js/directives/deploymentImage.js"></script>
+    <script <source src="js/directives/tooltip.js"></script>
 </body>
 
 </html>
