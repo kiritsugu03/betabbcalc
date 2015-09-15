@@ -1,6 +1,7 @@
 var app = angular.module('bbcalc', []);
 
 app.controller('main', function($scope,$http) {
+<<<<<<< HEAD
     $http.get('/js/data.json').success(function(data) {
       $scope.data = data;
     });
@@ -50,6 +51,12 @@ app.controller('main', function($scope,$http) {
       if(wcdmaSu == 15.5)
         return '510';
     }
+=======
+    $http.get('../data.json').success(function(data) {
+      $scope.data = data;
+    });
+
+>>>>>>> 47e390e284c7cf36766ac01bf2b551c04b765e9b
     $scope.filterRcs = function(item){
         if ($scope.isLteOn) {
             if ($scope.isRcsOn)
@@ -62,7 +69,11 @@ app.controller('main', function($scope,$http) {
     $scope.filterEcs = function(item){
         if ($scope.isLteOn) {
             if ($scope.isEcsOn)
+<<<<<<< HEAD
             {
+=======
+            { 
+>>>>>>> 47e390e284c7cf36766ac01bf2b551c04b765e9b
               return !(item.lteBbCapacity.ecs === null || item.lteBbCapacity.ecs.trim().length === 0)
             }
         }
@@ -71,12 +82,17 @@ app.controller('main', function($scope,$http) {
     $scope.filterBcs = function(item){
         if ($scope.isLteOn) {
             if ($scope.isBcsOn)
+<<<<<<< HEAD
             {
+=======
+            { 
+>>>>>>> 47e390e284c7cf36766ac01bf2b551c04b765e9b
               return !(item.lteBbCapacity.bcs === null || item.lteBbCapacity.bcs.trim().length === 0)
             }
         }
         return true;
     }
+<<<<<<< HEAD
     $scope.getSummary = function(config){
         var summary = {
             fsmf : "",
@@ -183,4 +199,6 @@ app.controller('main', function($scope,$http) {
             $scope.objFilter.deployment2.fbbx2 = '';
         }
     }
+=======
+>>>>>>> 47e390e284c7cf36766ac01bf2b551c04b765e9b
 });

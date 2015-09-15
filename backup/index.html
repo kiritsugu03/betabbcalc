@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html ng-app="bbcalc">
+  <head>
+    <meta charset="utf-8">
+    <title>Hackathon 2</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <!-- <link rel="stylesheet" href="index.css"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  </head>
+  <body ng-controller="main" style="padding: 100px;">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3">
+            <button type="button" class="navbar-btn" ng-click="showSelectorGSM = !showSelectorGSM" ng-class="{true: 'btn btn-primary', false: 'btn btn-default'}[!showSelectorGSM]">GSM</button>
+            <div ng-show="showSelectorGSM">
+              <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  Dropdown
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                  <li><a >Action</a></li>
+                  <li><a >Another action</a></li>
+                  <li><a >Something else here</a></li>
+                  <li><a >Separated link</a></li>
+                </ul>
+              </div>
+              <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  Dropdown2
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                  <li><a >Action</a></li>
+                  <li><a >Another action</a></li>
+                  <li><a >Something else here</a></li>
+                  <li><a >Separated link</a></li>
+                </ul>
+              </div>
+              <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  Dropdown3
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                  <li><a >Action</a></li>
+                  <li><a >Another action</a></li>
+                  <li><a >Something else here</a></li>
+                  <li><a >Separated link</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <button type="button" class="navbar-btn" ng-click="showSelectorWCDMA = !showSelectorWCDMA" ng-class="{true: 'btn btn-primary', false: 'btn btn-default'}[!showSelectorWCDMA]">WCDMA</button>
+            <div ng-show="showSelectorWCDMA">
+              <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  SU
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                  <li><a >Action</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <button type="button" class="navbar-btn" ng-click="showSelectorLTE = !showSelectorLTE" ng-class="{true: 'btn btn-primary', false: 'btn btn-default'}[!showSelectorLTE]">LTE</button>
+            <div ng-show="showSelectorLTE">
+              <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  BCS
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                  <li ng-repeat="data in bcs"><a>{{data}}</a></li>
+                </ul>
+              </div>
+              <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  RCS
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                  <li ng-repeat="data in rcs"><a>{{data}}</a></li>
+                </ul>
+              </div>
+              <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  ECS
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                  <li ng-repeat="data in ecs"><a>{{data}}</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <form class="navbar-form navbar-left" role="search">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <pre style="overflow-y: scroll">
+        {{ data.length | json}}
+      </pre>
+    </div>
+    <script type="text/javascript">
+       $(".dropdown-menu li a").click(function(){
+         $(this).parents(".dropdown").find('.btn').html($(this).text() + ' <span class="caret"></span>');
+         $(this).parents(".dropdown").find('.btn').val($(this).data('value'));
+       });
+     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html lang="en" ng-app="bbcalc">
 <head>
     <meta charset="utf-8">
@@ -607,4 +608,217 @@
     <script <source src="js/directives/tooltip.js"></script>
 </body>
 
+=======
+<html ng-app="bbcalc">
+  <head>
+    <meta charset="utf-8">
+    <title>Hackathon 2</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <!-- <link rel="stylesheet" href="index.css"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <style>
+    table th, table td {
+      border: solid 1px;
+      padding: 5px;
+    }
+    </style>
+  </head>
+  <body ng-controller="main" style="padding: 100px;">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3">
+            <button type="button" class="navbar-btn" ng-click="showSelectorGSM = !showSelectorGSM" ng-class="{true: 'btn btn-primary', false: 'btn btn-default'}[!showSelectorGSM]">GSM</button>
+            <div ng-show="showSelectorGSM">
+              <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  Dropdown
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                  <li><a >Action</a></li>
+                  <li><a >Another action</a></li>
+                  <li><a >Something else here</a></li>
+                  <li><a >Separated link</a></li>
+                </ul>
+              </div>
+              <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  Dropdown2
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                  <li><a >Action</a></li>
+                  <li><a >Another action</a></li>
+                  <li><a >Something else here</a></li>
+                  <li><a >Separated link</a></li>
+                </ul>
+              </div>
+              <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  Dropdown3
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                  <li><a >Action</a></li>
+                  <li><a >Another action</a></li>
+                  <li><a >Something else here</a></li>
+                  <li><a >Separated link</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <button type="button" class="navbar-btn" ng-click="showSelectorWCDMA = !showSelectorWCDMA" ng-class="{true: 'btn btn-primary', false: 'btn btn-default'}[!showSelectorWCDMA]">WCDMA</button>
+            <div ng-show="showSelectorWCDMA">
+              <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  SU
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                  <li><a >Action</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <button type="button" class="navbar-btn" ng-click="showSelectorLTE = !showSelectorLTE" ng-class="{true: 'btn btn-primary', false: 'btn btn-default'}[!showSelectorLTE]">LTE</button>
+            <div ng-show="showSelectorLTE">
+              <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  BCS
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                  <li ng-repeat="data in bcs"><a>{{data}}</a></li>
+                </ul>
+              </div>
+              <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  RCS
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                  <li ng-repeat="data in rcs"><a>{{data}}</a></li>
+                </ul>
+              </div>
+              <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  ECS
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                  <li ng-repeat="data in ecs"><a>{{data}}</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <form class="navbar-form navbar-left" role="search">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search">
+              </dropdowniv>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <button class="btn btn-default" ng-click="isGsmOn = !isGsmOn; objFilter.gsmBbCapacity = '24'" ng-class="{active:isGsmOn}">GSM</button>
+    <button class="btn btn-default" ng-click="isLteOn = !isLteOn" ng-class="{active:isLteOn}">LTE</button>
+    <button class="btn btn-default" ng-click="isWcdmaOn = !isWcdmaOn" ng-class="{active:isWcdmaOn}">WCDMA</button>
+    <div class="dropdown" ng-show="isGsmOn">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            {{objFilter.gsmBbCapacity}} TRXs
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a href="#" ng-click="objFilter.gsmBbCapacity = '24'">24 TRXs</a></li>
+        </ul>
+    </div>
+    <div ng-show="isLteOn">
+    RCS: <input type="checkbox" ng-model="isRcsOn">
+    BCS: <input type="checkbox" ng-model="isBcsOn">
+    ECS: <input type="checkbox" ng-model="isEcsOn">
+    </div>
+    <div class="dropdown" ng-show="isWcdmaOn">
+        SU:
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            {{objFilter.wcdmaSu}}
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a href="#" ng-click="objFilter.wcdmaSu = ''"></a></li>
+            <li><a href="#" ng-click="objFilter.wcdmaSu = '3.5'">3.5</a></li>
+            <li><a href="#" ng-click="objFilter.wcdmaSu = '5.5'">5,5</a></li>
+            <li><a href="#" ng-click="objFilter.wcdmaSu = '9.5'">9.5</a></li>
+            <li><a href="#" ng-click="objFilter.wcdmaSu = '11.5'">11.5</a></li>
+            <li><a href="#" ng-click="objFilter.wcdmaSu = '15.5'">15.5</a></li>
+            <li><a href="#" ng-click="objFilter.wcdmaSu = '17.5'">17.5</a></li>
+        </ul>
+    </div>
+    <input ng-model="objFilter.gsmBbCapacity" type="text" placeholder="gsmBbCapacity">
+    <input ng-model="objFilter.lteBbCapacity.rcs" type="text" placeholder="rcs">
+    <input ng-model="objFilter.lteBbCapacity.bcs" type="text" placeholder="bcs">
+    <input ng-model="objFilter.lteBbCapacity.ecs" type="text" placeholder="ecs">
+    <input ng-model="objFilter.sbtsSmConfiguration" type="text" placeholder="sbtsSmConfiguration">
+    <pre>
+      {{objFilter|json}}
+    </pre>
+    <div class="container">
+      <div class="col-md-12">
+          <table>
+            <tr>
+              <th rowspan="2">SBTS SM configuration</th>
+              <th colspan="3">SM1 deploymebnt</th>
+              <th colspan="3">SM2 Deployment</th>
+              <th colspan="3">LTE BB capacity</th>
+              <th>WCDMA BB capacity</th>
+              <th>GSM BB capacity</th>
+            </tr>
+          <tr>
+            <th>FSMF_1</th>
+            <th>FBBx_1.1</th>
+            <th>FBBX_1.2</th>
+            <th>FSMF_2</th>
+            <th>FBBx_2.1</th>
+            <th>FBBX_2.2</th>
+            <th>#RCS</th>
+            <th>#BCS</th>
+            <th>#ECS</th>
+            <th>#SU</th>
+            <th>#TRXs</th>
+          </tr>
+          <tr ng-repeat="config in data | filter:{'gsmBbCapacity':objFilter.gsmBbCapacity, 'wcdmaSu':objFilter.wcdmaSu} | filter:filterRcs | filter:filterEcs | filter:filterBcs">
+            <td>{{config.sbtsSmConfiguration}}</td>
+            <td>{{config.sm1Deployment.fsmf1}}</td>
+            <td>{{config.sm1Deployment.fbbx1}}</td>
+            <td>{{config.sm1Deployment.fbbx2}}</td>
+            <td>{{config.sm2Deployment.fsmf1}}</td>
+            <td>{{config.sm2Deployment.fbbx1}}</td>
+            <td>{{config.sm2Deployment.fbbx2}}</td>
+            <td>{{config.lteBbCapacity.rcs}}</td>
+            <td>{{config.lteBbCapacity.bcs}}</td>
+            <td>{{config.lteBbCapacity.ecs}}</td>
+            <td>{{config.wcdmaSu}}</td>
+            <td>{{config.gsmBbCapacity}}</td>
+          </tr>
+
+
+          </table>
+      </div>
+    </div>
+    </a>
+    <script type="text/javascript">
+       $(".dropdown-menu li a").click(function(){
+         $(this).parents(".dropdown").find('.btn').html($(this).text() + ' <span class="caret"></span>');
+         $(this).parents(".dropdown").find('.btn').val($(this).data('value'));
+       });
+     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+>>>>>>> 47e390e284c7cf36766ac01bf2b551c04b765e9b
 </html>
