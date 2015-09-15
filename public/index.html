@@ -216,7 +216,7 @@
                             </ul>
                             <ul class="nav nav-third-level">
                               <ul class="nav nav-second-level">
-                                <li class="" >
+                                <li>
                                   <a href="#" >
                                     <select class="form-control" id="sel1" ng-model="objFilter.deployment1.fbbx2">
                                       <option value="" selected>Baseband Capacity</option>
@@ -347,16 +347,11 @@
                             </div>
                         </a>
                     </div>
-                    <div class="panel panel-danger  " ng-show="viewConfDetails">
-                      <div class="panel-heading">
-                        <h3>hello world</h3>
-                      </div>
-                    </div>
                 </div>
             </div>
             <!-- /.row -->
             <div class="row" ng-show="viewLteDetails">
-              <div class="col-md-6 col-lg-4">
+              <div class="col-md-6 col-lg-4" ng-show="isBcsOn && isLteOn">
                 <div class="panel panel-info ">
                   <div class="panel panel-heading">
                     <span><h5><i class="fa fa-list-alt"></i>&nbsp;Basic Cell Set (BCS) - FSMF or FBBC</h5></span>
@@ -369,7 +364,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-6 col-lg-4">
+              <div class="col-md-6 col-lg-4" ng-show="isEcsOn && isLteOn">
                 <div class="panel panel-info ">
                   <div class="panel panel-heading">
                     <span><h5><i class="fa fa-list-alt"></i>&nbsp;Extended Cell Set (ECS) - FSMF + FBBC</h5></span>
@@ -379,7 +374,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-6 col-lg-4">
+              <div class="col-md-6 col-lg-4" ng-show="isRcsOn && isLteOn">
                 <div class="panel panel-info">
                   <div class="panel panel-heading">
                     <span><h5><i class="fa fa-list-alt"></i>&nbsp;Reduced Cell Set (RRCS) - FSMF*</h5></span>
@@ -461,13 +456,59 @@
               </div>
             </div>
             <div class="row" ng-show="view2gDetails">
-              <div class="col-lg-12 col-md-12">
+              <div class="col-lg-12 col-md-12" ng-show="isGsmOn">
                 <div class="panel panel-success">
                   <div class="panel-heading">
                     <span><h5><i class="fa fa-warning"></i> Note</h5></span>
                   </div>
                   <div class="panel-body">
                     <p>For now, GSM only supports 24TRXs, however, it is possible to add more TRXs supported in the future.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row" ng-show="viewConfDetails">
+              <div class="col-md-6 col-lg-6">
+                <div class="panel panel-danger" ng-show="isFsmf">
+                  <div class="panel-heading">
+                    <span><h5><i class="fa fa-cog"></i> SM Deployment 1</h5></span>
+                  </div>
+                  <div class="panel-body deployment">
+                    <div class="first">
+                        <div class="pdu">Opt. PDU</div>
+                        <div class="trs">Opt. TRS ext</div>
+                        <div class="fsmf" style="background: #d9534f">
+                        {{objFilter.deployment1.fsmf1}}
+                        </div>
+                        <div class="fbbx1" ng-show="objFilter.deployment1.fbbx1" style="background: #d9534f">
+                        {{objFilter.deployment1.fbbx1}}
+                        </div>
+                        <div class="fbbx2" ng-show="objFilter.deployment1.fbbx2" style="background: #d9534f">
+                          {{objFilter.deployment1.fbbx2}}
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-6">
+                <div class="panel panel-danger" ng-show="isFsmf2">
+                  <div class="panel-heading">
+                    <span><h5><i class="fa fa-cog"></i> SM Deployment 2</h5></span>
+                  </div>
+                  <div class="panel-body deployment">
+                    <div class="second">
+                        <div class="pdu">Opt. PDU</div>
+                        <div class="trs">Opt. TRS ext</div>
+                        <div class="fsmf" style="background: #d9534f">
+                        {{objFilter.deployment2.fsmf1}}
+                        </div>
+                        <div class="fbbx1" ng-show="objFilter.deployment2.fbbx1" style="background: #d9534f">
+                        {{objFilter.deployment2.fbbx1}}
+                        </div>
+                        <div class="fbbx2" ng-show="objFilter.deployment2.fbbx2" style="background: #d9534f">
+                        {{objFilter.deployment2.fbbx2}}
+                        </div>
+                    </div>
                   </div>
                 </div>
               </div>
