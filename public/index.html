@@ -103,7 +103,6 @@
 </head>
 
 <body ng-controller="main">
-
     <div id="wrapper">
 
         <!-- Navigation -->
@@ -402,7 +401,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-6 col-lg-offset-3 col-md-6" ng-if="objFilter.wcdmaSu == 11.5">
+              <div class="col-lg-6 col-lg-offset-3 col-md-6" ng-if="objFilter.wcdmaSu == 11.5  && isWcdmaOn">
                 <div class="panel panel-warning">
                   <div class="panel-heading">
                     <span><h5><i class="fa fa-warning"></i> WCDMA BB Capacity: 11.5 SU</h5></span>
@@ -413,7 +412,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-6 col-lg-offset-3 col-md-6" ng-if="objFilter.wcdmaSu == 17.5">
+              <div class="col-lg-6 col-lg-offset-3 col-md-6" ng-if="objFilter.wcdmaSu == 17.5  && isWcdmaOn">
                 <div class="panel panel-warning">
                   <div class="panel-heading">
                     <span><h5><i class="fa fa-warning"></i> WCDMA BB Capacity: 17.5 SU</h5></span>
@@ -424,7 +423,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-6 col-lg-offset-3 col-md-6" ng-if="objFilter.wcdmaSu == 3.5">
+              <div class="col-lg-6 col-lg-offset-3 col-md-6" ng-if="objFilter.wcdmaSu == 3.5  && isWcdmaOn">
                 <div class="panel panel-warning">
                   <div class="panel-heading">
                     <span><h5><i class="fa fa-warning"></i> WCDMA BB Capacity: 3.5 SU</h5></span>
@@ -435,7 +434,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-6 col-lg-offset-3 col-md-6" ng-if="objFilter.wcdmaSu == 9.5">
+              <div class="col-lg-6 col-lg-offset-3 col-md-6" ng-if="objFilter.wcdmaSu == 9.5  && isWcdmaOn">
                 <div class="panel panel-warning">
                   <div class="panel-heading">
                     <span><h5><i class="fa fa-warning"></i> WCDMA BB Capacity: 9.5 SU</h5></span>
@@ -446,7 +445,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-6 col-lg-offset-3 col-md-6" ng-if="objFilter.wcdmaSu == 15.5">
+              <div class="col-lg-6 col-lg-offset-3 col-md-6" ng-if="objFilter.wcdmaSu == 15.5  && isWcdmaOn ">
                 <div class="panel panel-warning">
                   <div class="panel-heading">
                     <span><h5><i class="fa fa-warning"></i> WCDMA BB Capacity: 15.5 SU</h5></span>
@@ -481,7 +480,7 @@
                       <th>GSM BB</th>
                       <th>DEPLOYMENT</th>
                     </tr>
-                  <tr  ng-repeat="config in data | filter:{'gsmBbCapacity':objFilter.gsmBbCapacity, 'wcdmaSu':objFilter.wcdmaSu} | filter:filterRcs | filter:filterEcs | filter:filterBcs | filter:filterConfigs">
+                  <tr  ng-repeat="config in data | filter:{'gsmBbCapacity':objFilter.gsmBbCapacity, 'wcdmaSu':objFilter.wcdmaSu} | filter:filterRcs | filter:filterEcs | filter:filterBcs">
                     <td>{{getSummary(config).fsmf}}</td>
                     <td>{{getSummary(config).fbba}} {{getSummary(config).fbbc}} {{getSummary(config).fbbac}}</td>
                     <td>{{config.wcdmaSu}}</td>
