@@ -141,12 +141,12 @@
                                     <li>
                                       <a href="#">
                                         <select class="form-control" id="sel1" ng-model="objFilter.wcdmaSu">
-                                          <option value="3.5">3.5</option>
-                                          <option value="5.5">5.5</option>
-                                          <option value="9.5">9.5</option>
-                                          <option value="11.5">11.5</option>
-                                          <option value="15.5">15.5</option>
-                                          <option value="17.5">17.5</option>
+                                          <option ng-option value="3.5">3.5</option>
+                                          <option ng-option value="5.5">5.5</option>
+                                          <option ng-option value="9.5">9.5</option>
+                                          <option ng-option value="11.5">11.5</option>
+                                          <option ng-option value="15.5">15.5</option>
+                                          <option ng-option value="17.5">17.5</option>
                                         </select>
                                       </a>
                                     </li>
@@ -370,7 +370,7 @@
               </div>
             </div>
             <div class="row" ng-show="view3gDetails">
-              <div class="col-lg-2 col-md-6">
+              <div class="col-lg-6 col-lg-offset-3 col-md-6" ng-if="objFilter.wcdmaSu == 5.5 && isWcdmaOn">
                 <div class="panel panel-warning">
                   <div class="panel-heading">
                     <span><h5><i class="fa fa-warning"></i> WCDMA BB Capacity: 5.5 SU</h5></span>
@@ -381,7 +381,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-2 col-md-6">
+              <div class="col-lg-6 col-lg-offset-3 col-md-6" ng-if="objFilter.wcdmaSu == 11.5">
                 <div class="panel panel-warning">
                   <div class="panel-heading">
                     <span><h5><i class="fa fa-warning"></i> WCDMA BB Capacity: 11.5 SU</h5></span>
@@ -392,7 +392,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-2 col-md-6">
+              <div class="col-lg-6 col-lg-offset-3 col-md-6" ng-if="objFilter.wcdmaSu == 17.5">
                 <div class="panel panel-warning">
                   <div class="panel-heading">
                     <span><h5><i class="fa fa-warning"></i> WCDMA BB Capacity: 17.5 SU</h5></span>
@@ -403,7 +403,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-2 col-md-6">
+              <div class="col-lg-6 col-lg-offset-3 col-md-6" ng-if="objFilter.wcdmaSu == 3.5">
                 <div class="panel panel-warning">
                   <div class="panel-heading">
                     <span><h5><i class="fa fa-warning"></i> WCDMA BB Capacity: 3.5 SU</h5></span>
@@ -414,7 +414,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-2 col-md-6">
+              <div class="col-lg-6 col-lg-offset-3 col-md-6" ng-if="objFilter.wcdmaSu == 9.5">
                 <div class="panel panel-warning">
                   <div class="panel-heading">
                     <span><h5><i class="fa fa-warning"></i> WCDMA BB Capacity: 9.5 SU</h5></span>
@@ -425,7 +425,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-2 col-md-6">
+              <div class="col-lg-6 col-lg-offset-3 col-md-6" ng-if="objFilter.wcdmaSu == 15.5">
                 <div class="panel panel-warning">
                   <div class="panel-heading">
                     <span><h5><i class="fa fa-warning"></i> WCDMA BB Capacity: 15.5 SU</h5></span>
