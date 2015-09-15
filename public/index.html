@@ -484,7 +484,25 @@
                   <tr  ng-repeat="config in data | filter:{'gsmBbCapacity':objFilter.gsmBbCapacity, 'wcdmaSu':objFilter.wcdmaSu} | filter:filterRcs | filter:filterEcs | filter:filterBcs | filter:filterConfigs">
                     <td>{{getSummary(config).fsmf}}</td>
                     <td>{{getSummary(config).fbba}} {{getSummary(config).fbbc}} {{getSummary(config).fbbac}}</td>
-                    <td>{{config.wcdmaSu}}</td>
+                    <td>
+                      <a href="" title="Useful Information/s" data-toggle="popover" data-content=
+                        '<table class="table table-condensed table-striped">
+                            <tr>
+                              <th class="well" style="text-align:center;">HSPA users FDPCH</th>
+                            </tr>
+                            <tr>
+                              <td style="text-align:center;">{{getFdcph(config.wcdmaSu)}}</td>
+                            </tr>
+                            <tr>
+                              <th class="well" style="text-align:center;">HSPA users non-FDPCH</th>
+                            </tr>
+                            <tr>
+                              <td style="text-align:center;">{{getNonFdcph(config.wcdmaSu)}}</td>
+                            </tr>
+                         </table>' data-trigger="hover">
+                        {{config.wcdmaSu}}
+                      </a>
+                    </td>
                     <td>{{getSummary(config).bcs}} {{getSummary(config).ecs}} {{getSummary(config).rcs}}</td>
                     <td>{{getSummary(config).gsmTrx}}</td>
                     <td>
@@ -518,6 +536,7 @@
     <script src="js/angular.js"></script>
     <script src="js/main.js"></script>
     <script src="js/directives/deploymentImage.js"></script>
+    <script <source src="js/directives/tooltip.js"></script>
 </body>
 
 </html>

@@ -19,6 +19,34 @@ app.controller('main', function($scope,$http) {
         }
     }
 
+    $scope.getFdcph = function(wcdmaSu){
+      if(wcdmaSu == 5.5)
+        return '320';
+      if(wcdmaSu == 11.5)
+        return '640';
+      if(wcdmaSu == 17.5)
+      	return '960';
+      if(wcdmaSu == 3.5)
+        return '230';
+      if(wcdmaSu == 9.5)
+        return '560';
+      if(wcdmaSu == 15.5)
+        return '860';
+    }
+    $scope.getNonFdcph = function(wcdmaSu){
+      if(wcdmaSu == 5.5)
+        return '195';
+      if(wcdmaSu == 11.5)
+        return '390';
+      if(wcdmaSu == 17.5)
+        return '580';
+      if(wcdmaSu == 3.5)
+        return '115';
+      if(wcdmaSu == 9.5)
+        return '320';
+      if(wcdmaSu == 15.5)
+        return '510';
+    }
     $scope.filterRcs = function(item){
         if ($scope.isLteOn) {
             if ($scope.isRcsOn)
@@ -124,7 +152,7 @@ app.controller('main', function($scope,$http) {
     }
     $scope.toggleDeployment2 = function() {
         $scope.isFsmf2 =  !$scope.isFsmf2;
-       
+
         if ($scope.isFsmf2) {
               $scope.objFilter.deployment2.fsmf1 = 'FSMF';
         }
@@ -138,7 +166,7 @@ app.controller('main', function($scope,$http) {
 
     $scope.toggleDeployment1 = function() {
         $scope.isFsmf =  !$scope.isFsmf;
-       
+
         if ($scope.isFsmf) {
               $scope.objFilter.deployment1.fsmf1 = 'FSMF';
         }
