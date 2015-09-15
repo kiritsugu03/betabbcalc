@@ -156,23 +156,87 @@
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-gear fa-fw"></i> Setup GSM<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                  <a href="#" ng-click="isGsmOn = !isGsmOn; objFilter.gsmBbCapacity = isGsmOn ? '24': ''; isRcsOn = isGsmOn ? isRcsOn : false"><input style="right: 0px;" type="checkbox" data-toggle="toggle" data-size="mini"  data-width="100%" data-onstyle="success"></a>
-                                  <ul class="nav nav-second-level">
-                                    <li>
-                                      <a href="#">
-                                        <select class="form-control" id="sel1" ng-model="objFilter.gsmBbCapacity">
-                                          <option value="24" selected>24 TRX</option>
-                                        </select>
-                                      </a>
-                                    </li>
-                                  </ul>
-                                </li>
+                          <a href="#"><i class="fa fa-gear fa-fw"></i> Setup GSM<span class="fa arrow"></span></a>
+                          <ul class="nav nav-second-level">
+                              <li>
+                                <a href="#" ng-click="isGsmOn = !isGsmOn; objFilter.gsmBbCapacity = isGsmOn ? '24': ''; isRcsOn = isGsmOn ? isRcsOn : false"><input style="right: 0px;" type="checkbox" data-toggle="toggle" data-size="mini"  data-width="100%" data-onstyle="success"></a>
+                                <ul class="nav nav-second-level">
+                                  <li>
+                                    <a href="#">
+                                      <select class="form-control" id="sel1" ng-model="objFilter.gsmBbCapacity">
+                                        <option value="24" selected>24 TRX</option>
+                                      </select>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </li>
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
+                        <li>
+                        <a href="#"><i class="fa fa-gear fa-fw"></i> Setup SBTS SM <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                        <li>
+                            <a href="" ng-click="isFsfm = !isFsmf"><input style="right: 0px;" type="checkbox" data-on="FSMF 1 ON" data-off="FSMF 1 OFF" data-toggle="toggle" data-size="mini"  data-width="100%"></a>
+                            <ul class="nav nav-third-level">
+                              <ul class="nav nav-second-level">
+                                <li class="" >
+                                  <a href="#" >
+                                    <select class="form-control" id="sel1" >
+                                      <option value="" disabled selected>Baseband Capacity</option>
+                                      <option value="FBBA">FBBA</option>
+                                      <option value="FBBC">FBBC</option>
+                                    </select>
+                                  </a>
+                                </li>
+                              </ul>
+                            </ul>
+                            <ul class="nav nav-third-level">
+                              <ul class="nav nav-second-level">
+                                <li class="" >
+                                  <a href="#" >
+                                    <select class="form-control" id="sel1"  >
+                                      <option value="" disabled selected>Baseband Capacity</option>
+                                      <option value="FBBA">FBBA</option>
+                                      <option value="FBBC">FBBC</option>
+                                    </select>
+                                  </a>
+                                </li>
+                              </ul>
+                            </ul>
+                          </li>
+                          <li>
+                            <a href="" ng-click="isFsfm2 = !isFsmf2"><input style="right: 0px;" type="checkbox" data-on="FSMF 2 ON" data-off="FSMF 2 OFF" data-toggle="toggle" data-size="mini"  data-width="100%"></a>
+                              <ul class="nav nav-third-level">
+                                <ul class="nav nav-second-level">
+                                  <li class="" >
+                                    <a href="#" >
+                                      <select class="form-control" id="sel1"  >
+                                        <option value="" disabled selected>Baseband Capacity</option>
+                                        <option value="FBBA">FBBA</option>
+                                        <option value="FBBC">FBBC</option>
+                                      </select>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </ul>
+                              <ul class="nav nav-third-level">
+                                <ul class="nav nav-second-level">
+                                  <li class="" >
+                                    <a href="#" >
+                                      <select class="form-control" id="sel1"  >
+                                        <option value="" disabled selected>Baseband Capacity</option>
+                                        <option value="FBBA">FBBA</option>
+                                        <option value="FBBC">FBBC</option>
+                                      </select>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </ul>
+                          </li>
+                      </ul>
+                      <!-- /.nav-second-level -->
+                      </li>
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->

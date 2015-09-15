@@ -4,7 +4,7 @@
     "noOfRats": "1",
     "sbtsSmConfiguration": "FSMF",
     "sm1Deployment": {
-      "fsmf1" : "gsm",
+      "fsmf1" : "GSM",
       "fbbx1" : "",
       "fbbx2": ""
     },
@@ -26,8 +26,8 @@
     "noOfRats": "1",
     "sbtsSmConfiguration": "FSMF+FBBC",
     "sm1Deployment": {
-      "fsmf1" : "gsm",
-      "fbbx1" : "gsm",
+      "fsmf1" : "GSM",
+      "fbbx1" : "GSM",
       "fbbx2": ""
     },
     "sm2Deployment": {
@@ -48,9 +48,9 @@
     "noOfRats": "1",
     "sbtsSmConfiguration": "FSMF+FBBC+FBBC",
     "sm1Deployment": {
-      "fsmf1" : "lte",
-      "fbbx1" : "lte",
-      "fbbx2": "lte"
+      "fsmf1" : "LTE",
+      "fbbx1" : "LTE",
+      "fbbx2": "LTE"
     },
     "sm2Deployment": {
       "fsmf1" : "",
@@ -70,9 +70,9 @@
     "noOfRats": "1",
     "sbtsSmConfiguration": "FSMF+FBBC+FBBC",
     "sm1Deployment": {
-      "fsmf1" : "lte",
-      "fbbx1" : "lte",
-      "fbbx2": "lte"
+      "fsmf1" : "LTE",
+      "fbbx1" : "LTE",
+      "fbbx2": "LTE"
     },
     "sm2Deployment": {
       "fsmf1" : "",
@@ -92,8 +92,8 @@
     "noOfRats": "1",
     "sbtsSmConfiguration": "FSMF+FBBC",
     "sm1Deployment": {
-      "fsmf1" : "lte",
-      "fbbx1" : "lte",
+      "fsmf1" : "LTE",
+      "fbbx1" : "LTE",
       "fbbx2": ""
     },
     "sm2Deployment": {
@@ -114,8 +114,8 @@
     "noOfRats": "1",
     "sbtsSmConfiguration": "FSMF+FBBC",
     "sm1Deployment": {
-      "fsmf1" : "lte",
-      "fbbx1" : "lte",
+      "fsmf1" : "LTE",
+      "fbbx1" : "LTE",
       "fbbx2": ""
     },
     "sm2Deployment": {
@@ -136,7 +136,7 @@
     "noOfRats": "1",
     "sbtsSmConfiguration": "FSMF",
     "sm1Deployment": {
-      "fsmf1" : "lte",
+      "fsmf1" : "LTE",
       "fbbx1" : "",
       "fbbx2": ""
     },
@@ -158,9 +158,9 @@
     "noOfRats": "1",
     "sbtsSmConfiguration": "FSMF+FBBA/C+FBBA/C",
     "sm1Deployment": {
-      "fsmf1" : "wcdma",
-      "fbbx1" : "wcdma",
-      "fbbx2": "wcdma"
+      "fsmf1" : "WCDMA",
+      "fbbx1" : "WCDMA",
+      "fbbx2": "WCDMA"
     },
     "sm2Deployment": {
       "fsmf1" : "",
@@ -180,8 +180,8 @@
     "noOfRats": "1",
     "sbtsSmConfiguration": "FSMF+FBBA/C",
     "sm1Deployment": {
-      "fsmf1" : "wcdma",
-      "fbbx1" : "wcdma",
+      "fsmf1" : "WCDMA",
+      "fbbx1" : "WCDMA",
       "fbbx2": ""
     },
     "sm2Deployment": {
@@ -202,7 +202,7 @@
     "noOfRats": "1",
     "sbtsSmConfiguration": "FSMF",
     "sm1Deployment": {
-      "fsmf1" : "wcdma",
+      "fsmf1" : "WCDMA",
       "fbbx1" : "",
       "fbbx2": ""
     },
@@ -224,9 +224,9 @@
     "noOfRats": "2",
     "sbtsSmConfiguration": "FSMF+FBBA/C+FBBA/C",
     "sm1Deployment": {
-      "fsmf1" : "wg",
-      "fbbx1" : "wcdma",
-      "fbbx2": "wcdma"
+      "fsmf1" : "WCDMA-GSM",
+      "fbbx1" : "WCDMA",
+      "fbbx2": "WCDMA"
     },
     "sm2Deployment": {
       "fsmf1" : "",
@@ -246,8 +246,8 @@
     "noOfRats": "2",
     "sbtsSmConfiguration": "FSMF+FBBA/C",
     "sm1Deployment": {
-      "fsmf1" : "wg",
-      "fbbx1" : "wcdma",
+      "fsmf1" : "WCDMA-GSM",
+      "fbbx1" : "WCDMA",
       "fbbx2": ""
     },
     "sm2Deployment": {
@@ -488,7 +488,7 @@
     "noOfRats": "3",
     "sbtsSmConfiguration": "FSMF+FBBC+FBBC",
     "sm1Deployment": {
-      "fsmf1" : "WG",
+      "fsmf1" : "WCDMA-GSM",
       "fbbx1" : "LTE",
       "fbbx2": "LTE"
     },
@@ -511,7 +511,7 @@
     "noOfRats": "3",
     "sbtsSmConfiguration": "FSMF+FBBC",
     "sm1Deployment": {
-      "fsmf1" : "WG",
+      "fsmf1" : "WCDMA-GSM",
       "fbbx1" : "LTE",
       "fbbx2": ""
     },
@@ -531,9 +531,9 @@
   {
     "sbtsSmMode": "LWG",
     "noOfRats": "3",
-    "sbtsSmConfiguration": "FSMF+FBBA/C+FBBC",
+    "sbtsSmConfiguration": "FSMF``+FBBA/C+FBBC",
     "sm1Deployment": {
-      "fsmf1" : "WG",
+      "fsmf1" : "WCDMA-GSM",
       "fbbx1" : "WCDMA",
       "fbbx2": "LTE"
     },
@@ -555,7 +555,7 @@
     "noOfRats": "3",
     "sbtsSmConfiguration": "FSMF+FBBC+FBBA/C",
     "sm1Deployment": {
-      "fsmf1" : "LG",
+      "fsmf1" : "LTE-GSM",
       "fbbx1" : "LTE",
       "fbbx2": "WCDMA"
     },
@@ -577,7 +577,7 @@
     "noOfRats": "3",
     "sbtsSmConfiguration": "FSMF+FBBA/C+FBBA/C",
     "sm1Deployment": {
-      "fsmf1" : "LG",
+      "fsmf1" : "LTE-GSM",
       "fbbx1" : "WCDMA",
       "fbbx2": "WCDMA"
     },
@@ -599,7 +599,7 @@
     "noOfRats": "3",
     "sbtsSmConfiguration": "FSMF+FBBA/C",
     "sm1Deployment": {
-      "fsmf1" : "LG",
+      "fsmf1" : "LTE-GSM",
       "fbbx1" : "WCDMA",
       "fbbx2": ""
     },
@@ -621,7 +621,7 @@
     "noOfRats": "3",
     "sbtsSmConfiguration": "FSMF+FBBA/C+FBBA/C+FSMF+FBBC+FBBC",
     "sm1Deployment": {
-      "fsmf1" : "WG",
+      "fsmf1" : "WCDMA-GSM",
       "fbbx1" : "WCDMA",
       "fbbx2": "WCDMA"
     },
@@ -643,7 +643,7 @@
     "noOfRats": "3",
     "sbtsSmConfiguration": "FSMF+FBBA/C+FBBA/C+FSMF+FBBC+FBBC",
     "sm1Deployment": {
-      "fsmf1" : "WG",
+      "fsmf1" : "WCDMA-GSM",
       "fbbx1" : "WCDMA",
       "fbbx2": "WCDMA"
     },
@@ -665,7 +665,7 @@
     "noOfRats": "3",
     "sbtsSmConfiguration": "FSMF+FBBA/C+FBBA/C+FSMF+FBBC",
     "sm1Deployment": {
-      "fsmf1" : "WG",
+      "fsmf1" : "WCDMA-GSM",
       "fbbx1" : "WCDMA",
       "fbbx2": "WCDMA"
     },
@@ -687,7 +687,7 @@
     "noOfRats": "3",
     "sbtsSmConfiguration": "FSMF+FBBA/C+FBBA/C+FSMF+FBBC",
     "sm1Deployment": {
-      "fsmf1" : "WG",
+      "fsmf1" : "WCDMA-GSM",
       "fbbx1" : "WCDMA",
       "fbbx2": "WCDMA"
     },
@@ -709,7 +709,7 @@
     "noOfRats": "3",
     "sbtsSmConfiguration": "FSMF+FBBA/C+FBBA/C+FSMF",
     "sm1Deployment": {
-      "fsmf1" : "WG",
+      "fsmf1" : "WCDMA-GSM",
       "fbbx1" : "WCDMA",
       "fbbx2": "WCDMA"
     },
