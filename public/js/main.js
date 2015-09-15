@@ -6,6 +6,18 @@ app.controller('main', function($scope,$http) {
     });
 
     $scope.isGsmOn = false;
+    $scope.objFilter = {
+        deployment1: {
+            fsmf1: "",
+            fbbx1: "",
+            fbbx2: ""
+        },
+        deployment2: {
+            fsmf1: "",
+            fbbx1: "",
+            fbbx2: ""
+        }
+    }
 
     $scope.filterRcs = function(item){
         if ($scope.isLteOn) {
@@ -52,16 +64,16 @@ app.controller('main', function($scope,$http) {
         var fbbac = 0;
         angular.forEach(mods, function(value){
             if (value==="FSMF") {
-                fsmf =  fsmf + 1;
+                fsmf++;
             }
             else if (value==="FBBA") {
-                fbba =  fbba + 1;
+                fbba++;
             }
             else if (value==="FBBC") {
-                fbbc =  fbbc + 1;
+                fbbc++;
             }
             else if (value==="FBBA/C") {
-                fbbac =  fbbac + 1;
+                fbbac++;
             }
         });
 
@@ -75,5 +87,69 @@ app.controller('main', function($scope,$http) {
         summary.gsmTrx = config.gsmBbCapacity ? config.gsmBbCapacity+"TRX":"";
 
         return summary;
+    }
+    $scope.buildConfiguration = function() {
+        if ($scope.fbbx1) {
+            $scope.objFilter.sbtsSmConfiguration += '+' + $scope.fbbx1;
+        }
+    }
+    $scope.filterConfigs = function(item) {
+            var mods = item.sbtsSmConfiguration.split('+');
+        if ($scope.isFsmf) {
+            var config = "";
+            config += $scope.objFilter.deployment1.fsmf1 ? $scope.objFilter.deployment1.fsmf1:'';
+            config += $scope.objFilter.deployment1.fbbx1 ? '+'+$scope.objFilter.deployment1.fbbx1:'';
+            config += $scope.objFilter.deployment1.fbbx2 ? '+'+$scope.objFilter.deployment1.fbbx2:'';
+            config += $scope.objFilter.deployment2.fsmf1 ? '+'+$scope.objFilter.deployment2.fsmf1:'';
+            config += $scope.objFilter.deployment2.fbbx1 ? '+'+$scope.objFilter.deployment2.fbbx1:'';
+            config += $scope.objFilter.deployment2.fbbx2 ? '+'+$scope.objFilter.deployment2.fbbx2:'';
+            console.log(config);
+            config = config.split('+');
+            for(var i=0;i<config.length;i++)
+            {
+                if (mods[i]===config[i])
+                {
+                    continue;
+                }
+                else if (mods[i]==="FBBA/C" && (config[i]==="FBBA" || config[i]==="FBBC")){
+                    continue;
+                }
+                else {
+                    return false;
+                }
+            }
+            return true;
+        }
+        return true;
+    }
+    $scope.toggleDeployment2 = function() {
+        $scope.isFsmf2 =  !$scope.isFsmf2;
+       
+        if ($scope.isFsmf2) {
+              $scope.objFilter.deployment2.fsmf1 = 'FSMF';
+        }
+
+        else {
+            $scope.objFilter.deployment2.fsmf1 = '';
+            $scope.objFilter.deployment2.fbbx1 = '';
+            $scope.objFilter.deployment2.fbbx2 = '';
+        }
+    }
+
+    $scope.toggleDeployment1 = function() {
+        $scope.isFsmf =  !$scope.isFsmf;
+       
+        if ($scope.isFsmf) {
+              $scope.objFilter.deployment1.fsmf1 = 'FSMF';
+        }
+
+        else {
+            $scope.objFilter.deployment1.fsmf1 = '';
+            $scope.objFilter.deployment1.fbbx1 = '';
+            $scope.objFilter.deployment1.fbbx2 = '';
+            $scope.objFilter.deployment2.fsmf1 = '';
+            $scope.objFilter.deployment2.fbbx1 = '';
+            $scope.objFilter.deployment2.fbbx2 = '';
+        }
     }
 });

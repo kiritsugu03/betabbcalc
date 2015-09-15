@@ -103,6 +103,9 @@
 </head>
 
 <body ng-controller="main">
+  <pre>
+      {{objFilter|json}}
+    </pre>
     <div id="wrapper">
 
         <!-- Navigation -->
@@ -197,13 +200,13 @@
                         <a href="#"><i class="fa fa-gear fa-fw"></i> Setup SBTS SM <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                         <li>
-                            <a href="" ng-click="isFsfm = !isFsmf"><input style="right: 0px;" type="checkbox" data-on="FSMF 1 ON" data-off="FSMF 1 OFF" data-toggle="toggle" data-size="mini"  data-width="100%"></a>
+                            <a href="" ng-click="toggleDeployment1()"><input style="right: 0px;" type="checkbox" data-on="FSMF 1 ON" data-off="FSMF 1 OFF" data-toggle="toggle" data-size="mini" data-width="100%"></a>
                             <ul class="nav nav-third-level">
                               <ul class="nav nav-second-level">
                                 <li class="" >
                                   <a href="#" >
-                                    <select class="form-control" id="sel1" >
-                                      <option value="" disabled selected>Baseband Capacity</option>
+                                    <select class="form-control" id="sel1" ng-model="objFilter.deployment1.fbbx1">
+                                      <option value="" selected>Baseband Capacity</option>
                                       <option value="FBBA">FBBA</option>
                                       <option value="FBBC">FBBC</option>
                                     </select>
@@ -215,8 +218,8 @@
                               <ul class="nav nav-second-level">
                                 <li class="" >
                                   <a href="#" >
-                                    <select class="form-control" id="sel1"  >
-                                      <option value="" disabled selected>Baseband Capacity</option>
+                                    <select class="form-control" id="sel1" ng-model="objFilter.deployment1.fbbx2">
+                                      <option value="" selected>Baseband Capacity</option>
                                       <option value="FBBA">FBBA</option>
                                       <option value="FBBC">FBBC</option>
                                     </select>
@@ -226,13 +229,13 @@
                             </ul>
                           </li>
                           <li>
-                            <a href="" ng-click="isFsfm2 = !isFsmf2"><input style="right: 0px;" type="checkbox" data-on="FSMF 2 ON" data-off="FSMF 2 OFF" data-toggle="toggle" data-size="mini"  data-width="100%"></a>
+                            <a href="" ng-click="toggleDeployment2()"><input style="right: 0px;" type="checkbox" data-on="FSMF 2 ON" data-off="FSMF 2 OFF" data-toggle="toggle" data-size="mini"  data-width="100%"></a>
                               <ul class="nav nav-third-level">
                                 <ul class="nav nav-second-level">
                                   <li class="" >
                                     <a href="#" >
-                                      <select class="form-control" id="sel1"  >
-                                        <option value="" disabled selected>Baseband Capacity</option>
+                                      <select class="form-control" id="sel1" ng-model="objFilter.deployment2.fbbx1">
+                                        <option value="" disabled selected>NONE</option>
                                         <option value="FBBA">FBBA</option>
                                         <option value="FBBC">FBBC</option>
                                       </select>
@@ -244,8 +247,8 @@
                                 <ul class="nav nav-second-level">
                                   <li class="" >
                                     <a href="#" >
-                                      <select class="form-control" id="sel1"  >
-                                        <option value="" disabled selected>Baseband Capacity</option>
+                                      <select class="form-control" id="sel1" ng-model="objFilter.deployment2.fbbx2">
+                                        <option value="" disabled selected>NONE</option>
                                         <option value="FBBA">FBBA</option>
                                         <option value="FBBC">FBBC</option>
                                       </select>
@@ -480,7 +483,7 @@
                       <th>GSM BB</th>
                       <th>DEPLOYMENT</th>
                     </tr>
-                  <tr  ng-repeat="config in data | filter:{'gsmBbCapacity':objFilter.gsmBbCapacity, 'wcdmaSu':objFilter.wcdmaSu} | filter:filterRcs | filter:filterEcs | filter:filterBcs">
+                  <tr  ng-repeat="config in data | filter:{'gsmBbCapacity':objFilter.gsmBbCapacity, 'wcdmaSu':objFilter.wcdmaSu} | filter:filterRcs | filter:filterEcs | filter:filterBcs | filter:filterConfigs">
                     <td>{{getSummary(config).fsmf}}</td>
                     <td>{{getSummary(config).fbba}} {{getSummary(config).fbbc}} {{getSummary(config).fbbac}}</td>
                     <td>{{config.wcdmaSu}}</td>
