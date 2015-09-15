@@ -31,4 +31,46 @@ app.controller('main', function($scope,$http) {
         }
         return true;
     }
+    $scope.getSummary = function(config){
+        var summary = {
+            fsmf : "",
+            fbba : "",
+            fbbc : "",
+            fbbac : "",
+            bcs : "",
+            ecs : "",
+            rcs : "",
+            gsmTrx : ""
+        }
+        var mods = config.sbtsSmConfiguration.split('+');
+        var fsmf = 0;
+        var fbba = 0;
+        var fbbc = 0;
+        var fbbac = 0;
+        angular.forEach(mods, function(value){
+            if (value==="FSMF") {
+                fsmf =  fsmf + 1;
+            }
+            else if (value==="FBBA") {
+                fbba =  fbba + 1;
+            }
+            else if (value==="FBBC") {
+                fbbc =  fbbc + 1;
+            }
+            else if (value==="FBBA/C") {
+                fbbac =  fbbac + 1;
+            }
+        });
+
+        summary.fsmf = fsmf ? fsmf+"XFSMF":"";
+        summary.fbba = fbba ? fbba+"XFBBA":"";
+        summary.fbbc = fbbc ? fbbc+"XFBBC":"";
+        summary.fbbac = fbbac ? fbbac+"XFBBA/C":"";
+        summary.bcs = config.lteBbCapacity.bcs ? config.lteBbCapacity.bcs+"XBCS":"";
+        summary.ecs = config.lteBbCapacity.ecs ? config.lteBbCapacity.ecs+"XECS":"";
+        summary.rcs = config.lteBbCapacity.rcs ? config.lteBbCapacity.rcs+"XRCS":"";
+        summary.gsmTrx = config.gsmBbCapacity ? config.gsmBbCapacity+"TRX":"";
+
+        return summary;
+    }
 });
