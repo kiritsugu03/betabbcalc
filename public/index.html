@@ -503,7 +503,20 @@
                         {{config.wcdmaSu}}
                       </a>
                     </td>
-                    <td>{{getSummary(config).bcs}} {{getSummary(config).ecs}} {{getSummary(config).rcs}}</td>
+                    <td>
+                        <a href="" title="Useful Information/s" data-toggle="popover" data-content=
+                          '<img class="img-responsive" src="img/bcsInfo.png">' data-trigger="hover">
+                            {{getSummary(config).bcs}}
+                        </a>
+                        <a href="" title="Useful Information/s" data-toggle="popover" data-content=
+                          '<img class="img-responsive" src="img/ecsInfo.png">' data-trigger="hover">
+                            {{getSummary(config).ecs}}
+                        </a>
+                        <a href="" title="Useful Information/s" data-toggle="popover" data-content=
+                          '<img class="img-responsive" src="img/rcsInfo.png">' data-trigger="hover">
+                            {{getSummary(config).rcs}}
+                        </a>
+                      </td>
                     <td>{{getSummary(config).gsmTrx}}</td>
                     <td>
                       <deployment-image info="config"></deployment-image>
