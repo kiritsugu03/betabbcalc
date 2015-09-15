@@ -99,6 +99,9 @@
         background: -moz-linear-gradient(right, rgb(240,173,78), rgb(92,184,92)); /* For Firefox 3.6 to 15 */
         background: linear-gradient(to right, rgb(240,173,78), rgb(92,184,92)); /* Standard syntax */
       }
+      .center-text{
+        text-align: center;
+      }
     </style>
 </head>
 
@@ -135,7 +138,7 @@
                             <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
                         <li>
-                            <a href=""><i class="fa fa-gear fa-fw"></i> Setup LTE<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-gear fa-fw"></i> Setup LTE<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
                                   <a href="" ng-click="isLteOn = !isLteOn"><input style="right: 0px;" type="checkbox" data-on="LTE ON" data-off="LTE OFF" data-toggle="toggle" data-size="mini"  data-width="100%"></a>
@@ -199,8 +202,8 @@
                         <ul class="nav nav-second-level">
                         <li>
                             <a href="" ng-click="toggleDeployment1()"><input style="right: 0px;" type="checkbox" data-on="FSMF 1 ON" data-off="FSMF 1 OFF" data-toggle="toggle" data-size="mini" data-width="100%" data-onstyle="danger"></a>
-                            <ul class="nav nav-third-level">
-                              <ul class="nav nav-second-level">
+                            <ul class="nav nav-second-level">
+                              <ul class="nav nav-third-level">
                                 <li class="" >
                                   <a href="#" >
                                     <select class="form-control" id="sel1" ng-model="objFilter.deployment1.fbbx1">
@@ -472,14 +475,14 @@
             </div>
             <div class="row">
               <div class="col-lg-12">
-                <table class="table table-striped table-bordered col-lg-12">
+                <table class="table table-striped table-bordered col-lg-12 center-text">
                     <tr>
-                      <th>System Module Rel.3</th>
-                      <th>Capacity Extension Submodule</th>
-                      <th>WCDMA BB: No. of Subunits</th>
-                      <th>LTE BB</th>
-                      <th>GSM BB</th>
-                      <th>DEPLOYMENT</th>
+                      <th class="center-text">System Module Rel.3</th>
+                      <th class="center-text">Capacity Extension Submodule</th>
+                      <th class="center-text">WCDMA BB: No. of Subunits</th>
+                      <th class="center-text">LTE BB</th>
+                      <th class="center-text">GSM BB</th>
+                      <th class="center-text">DEPLOYMENT</th>
                     </tr>
                   <tr  ng-repeat="config in data | filter:{'gsmBbCapacity':objFilter.gsmBbCapacity, 'wcdmaSu':objFilter.wcdmaSu} | filter:filterRcs | filter:filterEcs | filter:filterBcs | filter:filterConfigs">
                     <td>{{getSummary(config).fsmf}}</td>
