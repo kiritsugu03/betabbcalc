@@ -1,0 +1,30 @@
+<div class="deployment">
+    <div class="first">
+        <div class="pdu">Opt. PDU</div>
+        <div class="trs">Opt. TRS ext</div>
+        <div class="fsmf">
+        {{info.sbtsSmConfiguration.split('+')[0]}} {{info.sm1Deployment.fsmf1}}
+        </div>
+        <div class="fbbx1" ng-show="info.sbtsSmConfiguration.split('+')[1]">
+        {{info.sbtsSmConfiguration.split('+')[1]}} {{info.sm1Deployment.fbbx1}}
+        </div>
+        <div class="fbbx2" ng-show="info.sbtsSmConfiguration.split('+')[2]">
+        {{info.sbtsSmConfiguration.split('+')[2]}} {{info.sm1Deployment.fbbx2}}
+        </div>
+    </div>
+
+    <div class="second" ng-show="info.sbtsSmConfiguration.split('+')[3]">
+        <div class="pdu">Opt. PDU</div>
+        <div class="trs">Opt. TRS ext</div>
+        <div class="fsmf">
+        {{info.sbtsSmConfiguration.split('+')[3]}} {{info.sm2Deployment.fsmf1}}
+        </div>
+        <div class="fbbx1" ng-show="info.sbtsSmConfiguration.split('+')[4]">
+        {{info.sbtsSmConfiguration.split('+')[4]}} {{info.sm2Deployment.fbbx1}}
+        </div>
+        <div class="fbbx2" ng-show="info.sbtsSmConfiguration.split('+')[5]">
+        {{info.sbtsSmConfiguration.split('+')[5]}} {{info.sm2Deployment.fbbx2}}
+        </div>
+    </div>
+
+</div>
