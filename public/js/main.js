@@ -19,6 +19,9 @@ app.controller('main', function($scope,$http) {
         }
     }
 
+    $scope.getBcsInfo = function(bcs){
+
+    }
     $scope.getFdcph = function(wcdmaSu){
       if(wcdmaSu == 5.5)
         return '320';
@@ -105,14 +108,14 @@ app.controller('main', function($scope,$http) {
             }
         });
 
-        summary.fsmf = fsmf ? fsmf+"XFSMF":"";
-        summary.fbba = fbba ? fbba+"XFBBA":"";
-        summary.fbbc = fbbc ? fbbc+"XFBBC":"";
-        summary.fbbac = fbbac ? fbbac+"XFBBA/C":"";
-        summary.bcs = config.lteBbCapacity.bcs ? config.lteBbCapacity.bcs+"XBCS":"";
-        summary.ecs = config.lteBbCapacity.ecs ? config.lteBbCapacity.ecs+"XECS":"";
-        summary.rcs = config.lteBbCapacity.rcs ? config.lteBbCapacity.rcs+"XRCS":"";
-        summary.gsmTrx = config.gsmBbCapacity ? config.gsmBbCapacity+"TRX":"";
+        summary.fsmf = fsmf ? fsmf+" x FSMF":"";
+        summary.fbba = fbba ? fbba+" x FBBA":"";
+        summary.fbbc = fbbc ? fbbc+" x FBBC":"";
+        summary.fbbac = fbbac ? fbbac+" x FBBA/C":"";
+        summary.bcs = config.lteBbCapacity.bcs ? config.lteBbCapacity.bcs+" x BCS":"";
+        summary.ecs = config.lteBbCapacity.ecs ? config.lteBbCapacity.ecs+" x ECS":"";
+        summary.rcs = config.lteBbCapacity.rcs ? config.lteBbCapacity.rcs+" x RCS":"";
+        summary.gsmTrx = config.gsmBbCapacity ? config.gsmBbCapacity+" TRX":"";
 
         return summary;
     }
